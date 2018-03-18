@@ -16,10 +16,38 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <noscript>
+      <!-- This CSS will only load if JavaScript is disabled -->
+      <style type="text/css">
+        *, *::after, *::before {
+          box-sizing: border-box;
+        }
+
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+
+        .noscript {
+          display: flex;
+
+          width: 100vw;
+          height: 100vh;
+
+          align-items: center;
+          justify-content: center;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <noscript>
-      You need to enable JavaScript to run this app.
+      <div class="noscript">
+        <main>
+          <p>There's nothing here if you don't have JavaScript enabled. Sorry about that.</p>
+          <p>But don't worry, this app is GPLv3-licensed, plus it respects your privacy. You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
+        </main>
+      </div>
     </noscript>
     <div id="root"></div>
     <!--
