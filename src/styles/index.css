@@ -48,7 +48,7 @@ body {
 .kb-header--content,
 .kb-main {
   height: 100%;
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
 
   padding: 0 1.5rem;
