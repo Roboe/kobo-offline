@@ -1,0 +1,19 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+- npm install
+
+pages:
+  stage: deploy
+  script:
+  - npm run build
+  - mv public public.repo && mv build public # See https://gitlab.com/gitlab-org/gitlab-ee/issues/401
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
