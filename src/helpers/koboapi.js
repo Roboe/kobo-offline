@@ -1,18 +1,24 @@
-import AFFILIATES from '../constants/affiliates.js'
+import { AFFILIATES } from '../constants/affiliates.js'
 import corsFetch from './crossorigin.js'
 
 export const checkUpdateEndpoint = (deviceId, affiliate, currentFwVersion = '0.0', serialNumber = 'N') =>
   `https://api.kobobooks.com/1.0/UpgradeCheck/Device/${deviceId}/${affiliate}/${currentFwVersion}/${serialNumber}`
 
-export function queryUpdates(deviceId, affiliate) {
+export function fetchLatestUpdate(deviceId, affiliate) {
   return corsFetch(checkUpdateEndpoint(deviceId, affiliate))
     .then((response) => response.json())
+    .then((json) => ({
+      data: json.Data,
+      type: json.UpgradeType,
+      downloadUrl: json.UpgradeURL,
+      releaseNotesUrl: json.ReleaseNoteURL,
+    }))
 }
 
-export function queryUpdatesForAllAffiliates(deviceId) {
+export function fetchLatestUpdateForAllAffiliates(deviceId) {
   return AFFILIATES
     .map((affiliate) => ({
       affiliate,
-      promise: queryUpdates(deviceId),
+      promise: fetchLatestUpdate(deviceId),
     }))
 }
