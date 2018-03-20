@@ -31,9 +31,6 @@
         .noscript {
           display: flex;
 
-          width: 100vw;
-          height: 100vh;
-
           align-items: center;
           justify-content: center;
         }
@@ -41,15 +38,28 @@
     </noscript>
   </head>
   <body>
-    <noscript>
-      <div class="noscript">
-        <main>
-          <p>There's nothing here if you don't have JavaScript enabled. Sorry about that.</p>
-          <p>But don't worry, this app is GPLv3-licensed, plus it respects your privacy. You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
-        </main>
-      </div>
-    </noscript>
-    <div id="root"></div>
+    <div class="kb-app">
+      <header class="kb-header">
+        <div class="kb-header--content">
+          <h1 class="kb-header--title">Kobo Offline</h1>
+        </div>
+      </header>
+      <main class="kb-main">
+        <section class="kb-firmware-downloads">
+          <header>
+            <h1>Firmware Downloads</h1>
+          </header>
+
+          <div id="react-root"></div>
+          <noscript class="noscript">
+            <div>
+              <p>JavaScript needs to be enabled to fetch firmware links right from Kobo servers. Sorry about that.</p>
+              <p>This site is <a href="https://en.wikipedia.org/wiki/GPLv3">GPLv3-licensed</a> and doesn't track you (Kobo servers may log your IP, though). You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
+            </div>
+          </noscript>
+        </section>
+      </main>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -1,4 +1,4 @@
-export default [
+export const AFFILIATES = [
     'kobo',
     'rakutenbooks',
     'bestbuyca',
@@ -6,3 +6,5 @@ export default [
     'beta',
     'walmartca',
 ]
+
+export default AFFILIATES[0]
