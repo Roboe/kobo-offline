@@ -45,18 +45,39 @@
         </div>
       </header>
       <main class="kb-main">
-        <section class="kb-firmware-downloads">
+        <section id="update-firmware">
           <header>
-            <h1>Firmware Downloads</h1>
+            <h2>
+              Update E-reader Firmware
+              <a class="self-link" href="#update-firmware"></a>
+            </h2>
+            <p>Get the latest official firmware right from Kobo.</p>
           </header>
 
-          <div id="react-root"></div>
-          <noscript class="noscript">
-            <div>
-              <p>JavaScript needs to be enabled to fetch firmware links right from Kobo servers. Sorry about that.</p>
-              <p>This site is <a href="https://en.wikipedia.org/wiki/GPLv3">GPLv3-licensed</a> and doesn't track you (Kobo servers may log your IP, though). You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
-            </div>
-          </noscript>
+          <section id="how-to-install-firmware">
+            <h3>
+              How to Install Offline Firmware Updates
+              <a class="self-link" href="#how-to-install-firmware"></a>
+            </h3>
+
+            <p>Download the correct ZIP file for your device from the list below. Then connect your Kobo e-reader to your computer. Extract ZIP file contents into the <code>.kobo</code> folder of your Kobo e-reader. Finally, remove your Kobo e-reader with security and your e-reader will refresh itself and start updating.</p>
+          </section>
+
+          <section id="firmware-downloads">
+            <h3>
+              Firmware Downloads
+              <a class="self-link" href="#firmware-downloads"></a>
+            </h3>
+
+            <noscript class="noscript">
+              <div>
+                <p>JavaScript needs to be enabled to fetch firmware links right from Kobo servers. Sorry about that.</p>
+                <p>This site is <a href="https://en.wikipedia.org/wiki/GPLv3">GPLv3-licensed</a> and doesn't track you (Kobo servers may log your IP, though). You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
+              </div>
+            </noscript>
+
+            <div id="react--firmware-download-list"></div>
+          </section>
         </section>
       </main>
     </div>

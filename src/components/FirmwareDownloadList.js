@@ -35,7 +35,7 @@ export default class FirmwareDownloadList extends React.Component {
     const { updates } = this.state
 
     return (
-      <div className="kb-firmware-downloads--list">
+      <ul className="kb-firmware-download-list">
         { DEVICES.map((device, index) =>
           <DeviceCard
             key={ `device-card-${index}` }
@@ -43,7 +43,7 @@ export default class FirmwareDownloadList extends React.Component {
             updates={ updates[device.id] }
             fetchUpdateForAffiliate={ this.fetchUpdatesFor(device.id) }
           />) }
-      </div>
+      </ul>
     )
   }
 }

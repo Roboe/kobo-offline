@@ -28,14 +28,16 @@ export default class DeviceCard extends React.Component {
     const modelWithoutVendor = model.replace('Kobo', '').trim()
 
     return (
-      <article className="kb-device-card">
-        <header>
-          <h1>{ modelWithoutVendor }</h1>
-          <span>{ hardware }</span>
-        </header>
+      <li class="kb-firmware-download-list--item">
+        <article className="kb-device-card">
+          <header>
+            <h4>{ modelWithoutVendor }</h4>
+            <span>{ hardware }</span>
+          </header>
 
-        { this.isLatestUpdateFetched(updates) && this.renderActions(updates[DEFAULT_AFFILIATE]) }
-      </article>
+          { this.isLatestUpdateFetched(updates) && this.renderActions(updates[DEFAULT_AFFILIATE]) }
+        </article>
+      </li>
     );
   }
 }

@@ -1,0 +1,8 @@
+.kb-app section > header > h2,
+.kb-app section > header > h3 {
+  text-transform: capitalize;
+}
+
+.kb-app section > header > h2 + p {
+  font-variant: small-caps;
+}
