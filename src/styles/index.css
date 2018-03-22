@@ -43,13 +43,19 @@ body {
 
   min-height: 100vh;
 
-  background-color: #cccccc;
+  background-color: #aaaaaa;
+  background-image: radial-gradient(#c0c0c0 15%, transparent 16%),
+                    radial-gradient(#c0c0c0 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
 }
 
 .kb-header {
   height: 3.5rem;
 
   background-color: #404040;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0  6px  6px rgba(0, 0, 0, 0.23);
 }
 .kb-header--content {
   display: flex;
@@ -68,7 +74,9 @@ body {
 .kb-main {
   flex-grow: 1;
 
-  background-color: #eeeeee;
+  background-color: #dddddd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0  6px  6px rgba(0, 0, 0, 0.23);
 }
 
 
