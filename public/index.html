@@ -45,6 +45,61 @@
         </div>
       </header>
       <main class="kb-main">
+        <section id="first-boot">
+          <header>
+            <h2>
+              First boot
+              <a class="self-link" href="#first-boot"></a>
+              <!-- https://www.darkcoding.net/misc/kobo-ereader-touch-on-ubuntu-linux/ -->
+            </h2>
+            <p>Avoid being forced to connect your e-reader to the internet and to create a Kobo account.</p>
+          </header>
+
+          <p>When you start a Kobo e-reader for the first time, it <strong>blocks</strong> any interaction until you run the setup software (Win/Mac only) or connect the device to a WiFi point. This initial setup will do two things: it will force you to create a <code>kobobooks.com</code> account, and it will update your device's firmware.</p>
+
+          <p>Some users prefer not to connect to the internet their devices or create online accounts for <strong>privacy</strong> implications, while others don't desire to buy e-books on Kobo's platform. Furthermore, there's no setup software for other OSes like <strong>GNU/Linux</strong>, so you're left alone with the WiFi option.</p>
+
+          <section id="skip-device-registration">
+            <h3>
+              Skip device registration
+              <a class="self-link" href="#skip-device-registration"></a>
+              <!-- https://www.mobileread.com/forums/showthread.php?t=171664 -->
+            </h3>
+
+            <p>The Kobo firmware will skip this blocking whenever it detects there's a <code>user</code>. We could achieve this manually editing the internal device database. There are two ways to achieve this: one for most users, which is easier, and other for tech savvy users, which is simpler.</p>
+
+            <section id="easier-option-for-most-users">
+              <h4>
+                Easier option for most users
+                <a class="self-link" href="#easier-option-for-most-users"></a>
+              </h4>
+              <ol>
+                <li>Install <a href="https://sqlitebrowser.github.io/sqlitebrowser/">DB Browser for SQLite</a> and open the <code>KoboReader.sqlite</code> in the <code>.kobo/</code> directory.</li>
+                <li>Click in the <code>Browse Data</code> tab and select the <code>user</code> table in the dropdown selector.</li>
+                <li>Click in the <code>New Record</code> button to register a new user. You can edit each cell value by double-clicking it.</li>
+                <li>Enter a random name (e.g. "Foo") in the <code>UserDisplayName</code> cell.</li>
+                <li>Enter a random e-mail address (e.g. "bar@baz.qux") in the <code>UserEmail</code> cell. It doesn't need to be a well-formed e-mail address.</li>
+                <li>Save the database by clicking <code>File</code> > <code>Save changes</code>.</li>
+              </ol>
+            </section>
+
+            <section id="simpler-option-for-tech-savvy-users">
+              <h4>
+                Simpler option for tech savvy users
+                <a class="self-link" href="#simpler-option-for-tech-savvy-users"></a>
+              </h4>
+              <details>
+                <ol>
+                  <li>Assuming you already have a command-line shell for SQLite 3, open the database by running <code>$ sqlite3 ./.kobo/KoboReader.sqlite</code> in a terminal (Linux, Mac) or command prompt (Windows).</li>
+                  <li>Add a new record to the <code>user</code> table by running the following query: <pre><code>INSERT INTO 'user' (UserID, UserKey, UserDisplayName, UserEmail)<br />VALUES (3, '', 'Foo', 'bar@baz.qux');</code></pre>
+                  You can change those values. <code>UserID</code> is a <code>NOT NULL</code> <code>PRIMARY KEY</code>. <code>UserEmail</code> doesn't need to match a well-formed e-mail account.</li>
+                  <li>Exit by running <code>.exit</code>.</li>
+                </ol>
+              </details>
+            </section>
+          </section>
+        </section>
+
         <section id="update-firmware">
           <header>
             <h2>

@@ -19,10 +19,23 @@ body {
   line-height: 2em;
   color: #212121;
 }
+
 .kb-app a {
   color: #0eb5ed;
   text-decoration: none;
 }
+.kb-app code {
+  font-size: 1.2em;
+  padding: .25em .5em;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.kb-app pre > code {
+  display: block;
+}
+.kb-app ol {
+  padding-left: 1.15em;
+}
+
 .kb-app .self-link {
   float: left;
 
