@@ -16,11 +16,22 @@ body {
 
 .kb-app {
   font-family: 'Fira Sans', sans-serif;
+  line-height: 2em;
   color: #212121;
 }
 .kb-app a {
   color: #0eb5ed;
   text-decoration: none;
+}
+.kb-app .self-link {
+  float: left;
+
+	padding: .25em .5em;
+  margin-top: -.25em;
+	margin-left: -1.5em;
+}
+.kb-app .self-link::before {
+  content: '#';
 }
 
 
@@ -51,7 +62,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
 
-  padding: 0 1.5rem;
+  padding: 0 2.25rem;
 }
 
 .kb-main {
@@ -64,4 +75,5 @@ body {
 /* Blocks, elements and modifiers (BEM) */
 
 @import './header.css';
+@import './sectioning.css';
 @import './firmware-downloads.css';

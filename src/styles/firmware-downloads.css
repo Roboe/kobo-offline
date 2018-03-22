@@ -1,8 +1,16 @@
-.kb-firmware-downloads--list {
+.kb-firmware-download-list {
   display: flex;
+
+  margin: 0;
+  padding: 0;
 
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.kb-firmware-download-list--item {
+  list-style: none;
+
+  margin-bottom: 1.5rem;
 }
 
 .kb-device-card {
@@ -10,7 +18,6 @@
 
   width: 15rem;
   min-height: 15rem;
-  margin-bottom: 1.5rem;
   padding: 1.5rem;
 
   flex-direction: column;
@@ -24,7 +31,7 @@
 }
 .kb-device-card a {
   display: inline-block;
-  padding: .5em;
+  padding: .25em .5em;
 
   text-transform: uppercase;
   font-weight: bold;

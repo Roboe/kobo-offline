@@ -5,5 +5,5 @@ import FirmwareDownloadList from './components/FirmwareDownloadList.js'
 
 ReactDOM.render(
   <FirmwareDownloadList />,
-  document.getElementById('react-root'),
+  document.getElementById('react--firmware-download-list'),
 );
