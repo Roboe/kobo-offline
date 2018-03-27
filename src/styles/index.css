@@ -18,6 +18,7 @@ body {
   font-family: 'Fira Sans', sans-serif;
   line-height: 2em;
   color: #212121;
+  text-align: justify;
 }
 
 .kb-app a {
