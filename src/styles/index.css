@@ -21,36 +21,36 @@ body {
   justify-content: center;
 }
 
-.kb-app {
+.kobo-app {
   font-family: 'Fira Sans', sans-serif;
   line-height: 2em;
   color: #212121;
   text-align: justify;
 }
 
-.kb-app a {
+.kobo-app a {
   color: #0eb5ed;
   text-decoration: none;
 }
-.kb-app code {
+.kobo-app code {
   font-size: 1.2em;
   padding: .25em .5em;
   background-color: rgba(0, 0, 0, 0.07);
 }
-.kb-app pre > code {
+.kobo-app pre > code {
   display: block;
 }
-.kb-app ol {
+.kobo-app ol {
   padding-left: 1.15em;
 }
-.kb-app summary {
+.kobo-app summary {
   cursor: pointer;
 }
 
-.kb-app .self-link::before {
+.kobo-app .self-link::before {
   content: '#';
 }
-.kb-app .self-link {
+.kobo-app .self-link {
   float: left;
   visibility: hidden;
 
@@ -60,14 +60,14 @@ body {
 
   font-weight: bold;
 }
-.kb-app *:hover > .self-link {
+.kobo-app *:hover > .self-link {
   visibility: visible;
 }
 
 
 /* App structure */
 
-.kb-app {
+.kobo-app {
   display: flex;
   flex-direction: column;
 
@@ -80,20 +80,20 @@ body {
   background-position: 0 0, 5px 5px;
 }
 
-.kb-header {
+.app-header {
   height: 3.5rem;
 
   background-color: #404040;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
               0  6px  6px rgba(0, 0, 0, 0.23);
 }
-.kb-header--content {
+.app-header--content {
   display: flex;
   align-items: center;
 }
 
-.kb-header--content,
-.kb-main {
+.app-header--content,
+.app-main {
   height: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -101,7 +101,7 @@ body {
   padding: 0 2.25rem;
 }
 
-.kb-main {
+.app-main {
   flex-grow: 1;
 
   background-color: #dddddd;

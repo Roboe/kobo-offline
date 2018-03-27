@@ -1,4 +1,4 @@
-.kb-device-card {
+.device-card {
   display: flex;
 
   width: 15rem;
@@ -13,7 +13,7 @@
   background-color: rgba(255, 255, 255, .5);
   box-shadow: 0 5px 10px rgba(0,0,0,.19),0 3px 3px rgba(0,0,0,.23);
 }
-.kb-device-card a {
+.device-card a {
   display: inline-block;
   padding: .25em .5em;
 
@@ -26,12 +26,12 @@
   transition: color .25s ease-in,
               background-color .25s ease-in;
 }
-.kb-device-card a:hover {
+.device-card a:hover {
   color: #ffffff;
   background-color: #52ccf5
 }
 
-.kb-device-card--title {
+.device-card--title {
   display: block;
 
   font-weight: bold;
