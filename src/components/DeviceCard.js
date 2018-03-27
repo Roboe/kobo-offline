@@ -31,7 +31,7 @@ export default class DeviceCard extends React.Component {
       <li class="kb-firmware-download-list--item">
         <article className="kb-device-card">
           <header>
-            <h4>{ modelWithoutVendor }</h4>
+            <span class="kb-device-card--title">{ modelWithoutVendor }</span>
             <span>{ hardware }</span>
           </header>
 
