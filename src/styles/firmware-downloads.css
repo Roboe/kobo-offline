@@ -1,4 +1,4 @@
-.kb-firmware-download-list {
+.firmware-download-list {
   display: flex;
 
   margin: 0;
@@ -7,7 +7,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.kb-firmware-download-list--item {
+.firmware-download-list--item {
   list-style: none;
 
   margin-bottom: 1.5rem;

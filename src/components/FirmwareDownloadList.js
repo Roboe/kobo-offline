@@ -35,7 +35,7 @@ export default class FirmwareDownloadList extends React.Component {
     const { updates } = this.state
 
     return (
-      <ul className="kb-firmware-download-list">
+      <ul className="firmware-download-list">
         { DEVICES.map((device, index) =>
           <DeviceCard
             key={ `device-card-${index}` }
