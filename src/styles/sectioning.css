@@ -3,6 +3,13 @@
   text-transform: capitalize;
 }
 
+.kb-app section > header > h2 > span {
+	border-bottom: 3px solid #0eb5ed;
+}
+
 .kb-app section > header > h2 + p {
-  font-variant: small-caps;
+  margin-top: -1.25em;
+
+  text-transform: uppercase;
+  color: #444444;
 }
