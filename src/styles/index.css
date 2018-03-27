@@ -36,15 +36,21 @@ body {
   padding-left: 1.15em;
 }
 
+.kb-app .self-link::before {
+  content: '#';
+}
 .kb-app .self-link {
   float: left;
+  visibility: hidden;
 
 	padding: .25em .5em;
   margin-top: -.25em;
 	margin-left: -1.5em;
+
+  font-weight: bold;
 }
-.kb-app .self-link::before {
-  content: '#';
+.kb-app *:hover > .self-link {
+  visibility: visible;
 }
 
 
