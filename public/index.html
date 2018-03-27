@@ -65,7 +65,7 @@
 
           <p>When you start a Kobo e-reader for the first time, it <strong>blocks</strong> any interaction until you run the setup software (Win/Mac only) or connect the device to a WiFi point. This initial setup will do two things: it will force you to create a <code>kobobooks.com</code> account, and it will update your device's firmware.</p>
 
-          <p>Some users prefer not to connect to the internet their devices or create online accounts for <strong>privacy</strong> implications, while others don't desire to buy e-books on Kobo's platform. Furthermore, there's no setup software for other OSes like <strong>GNU/Linux</strong>, so you're left alone with the WiFi option.</p>
+          <p>Some users would rather not connect their devices to the internet or create online accounts because of <strong>privacy</strong> concerns, while others may not be interested in buying e-books on Kobo's online marketplace. Furthermore, there's no setup software for other OSes like <strong>GNU/Linux</strong>, so you're left alone with the WiFi option.</p>
 
           <section id="skip-device-registration">
             <h3>
@@ -74,7 +74,7 @@
               <!-- https://www.mobileread.com/forums/showthread.php?t=171664 -->
             </h3>
 
-            <p>The Kobo firmware will skip this blocking whenever it detects there's a <code>user</code>. We could achieve this manually editing the internal device database. There are two ways to achieve this: one for most users, which is easier, and other for tech savvy users, which is simpler.</p>
+            <p>There is a simple way to by-pass the above mentioned restriction. The Kobo reader will skip it whenever a <code>user</code> is detected by its firmware. We could achieve this by editing the internal device database. There are two ways to do it: one for average users, and other for tech savvy ones.</p>
 
             <section id="easier-option-for-most-users">
               <h4>
@@ -82,12 +82,12 @@
                 <a class="self-link" href="#easier-option-for-most-users"></a>
               </h4>
               <ol>
-                <li>Install <a href="https://sqlitebrowser.github.io/sqlitebrowser/">DB Browser for SQLite</a> and open the <code>KoboReader.sqlite</code> in the <code>.kobo/</code> directory.</li>
-                <li>Click in the <code>Browse Data</code> tab and select the <code>user</code> table in the dropdown selector.</li>
-                <li>Click in the <code>New Record</code> button to register a new user. You can edit each cell value by double-clicking it.</li>
+                <li>Install <a href="https://sqlitebrowser.github.io/sqlitebrowser/">DB Browser for SQLite</a> and open the <code>KoboReader.sqlite</code> file that you will find in the <code>.kobo/</code> directory.</li>
+                <li>Click on the <code>Browse Data</code> tab and select the <code>user</code> table in the dropdown menu.</li>
+                <li>Click on the <code>New Record</code> button to register a new user. A new row will be added. Then you can edit each cell value by double-clicking on them.</li>
                 <li>Enter a random name (e.g. "Foo") in the <code>UserDisplayName</code> cell.</li>
-                <li>Enter a random e-mail address (e.g. "bar@baz.qux") in the <code>UserEmail</code> cell. It doesn't need to be a well-formed e-mail address.</li>
-                <li>Save the database by clicking <code>File</code> > <code>Save changes</code>.</li>
+                <li>Enter a random e-mail address (e.g. "bar@baz.qux") in the <code>UserEmail</code> cell. It doesn't need to match the standard e-mail address format.</li>
+                <li>Save the changes by clicking <code>File</code> &rarr; <code>Save changes</code>.</li>
               </ol>
             </section>
 
@@ -123,7 +123,7 @@
               <a class="self-link" href="#how-to-install-firmware"></a>
             </h3>
 
-            <p>Download the correct ZIP file for your device from the list below. Then connect your Kobo e-reader to your computer. Extract ZIP file contents into the <code>.kobo</code> folder of your Kobo e-reader. Finally, remove your Kobo e-reader with security and your e-reader will refresh itself and start updating.</p>
+            <p>Download the appropriate ZIP file for your device from the list below. Then connect your Kobo e-reader to your computer using a USB cable. Extract the ZIP file contents into the <code>.kobo</code> folder of your Kobo e-reader. Finally, remove your Kobo e-reader with security and your e-reader will refresh itself and start the updating procedure automatically.</p>
           </section>
 
           <section id="firmware-downloads">
