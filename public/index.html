@@ -97,8 +97,9 @@
                 <a class="self-link" href="#simpler-option-for-tech-savvy-users"></a>
               </h4>
               <details>
+                <summary>Assuming you already have a command-line shell for SQLite 3&hellip;</summary>
                 <ol>
-                  <li>Assuming you already have a command-line shell for SQLite 3, open the database by running <code>$ sqlite3 ./.kobo/KoboReader.sqlite</code> in a terminal (Linux, Mac) or command prompt (Windows).</li>
+                  <li>Open the database by running <code>$ sqlite3 ./.kobo/KoboReader.sqlite</code> in a terminal (Linux, Mac) or command prompt (Windows).</li>
                   <li>Add a new record to the <code>user</code> table by running the following query: <pre><code>INSERT INTO 'user' (UserID, UserKey, UserDisplayName, UserEmail)<br />VALUES (3, '', 'Foo', 'bar@baz.qux');</code></pre>
                   You can change those values. <code>UserID</code> is a <code>NOT NULL</code> <code>PRIMARY KEY</code>. <code>UserEmail</code> doesn't need to match a well-formed e-mail account.</li>
                   <li>Exit by running <code>.exit</code>.</li>

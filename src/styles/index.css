@@ -35,6 +35,9 @@ body {
 .kb-app ol {
   padding-left: 1.15em;
 }
+.kb-app summary {
+  cursor: pointer;
+}
 
 .kb-app .self-link::before {
   content: '#';
