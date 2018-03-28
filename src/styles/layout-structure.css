@@ -30,7 +30,7 @@
   max-width: 900px;
   margin: 0 auto;
 
-  padding: 0 2.25rem 3rem;
+  padding: 0 2.25rem;
 }
 
 .app-header--title {
@@ -42,6 +42,9 @@
 
 .app-main {
   flex-grow: 1;
+
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
 
   background-color: #dddddd;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
