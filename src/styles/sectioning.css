@@ -1,13 +1,20 @@
-.kobo-app section > header > h2,
-.kobo-app section > header > h3 {
+.kobo-app h1,
+.kobo-app h2,
+.kobo-app h3,
+.kobo-app h4,
+.kobo-app h5,
+.kobo-app h6,
+.kobo-app nav.toc li {
   text-transform: capitalize;
+  text-align: left; /* Fallback */
+  text-align: start;
 }
 
-.kobo-app section > header > h2 > span {
+.kobo-app header > h2 > span {
 	border-bottom: 3px solid #0eb5ed;
 }
 
-.kobo-app section > header > h2 + p {
+.kobo-app header > h2 + p {
   margin-top: -1.25em;
 
   text-transform: uppercase;
@@ -20,7 +27,4 @@
 
   border: 1px solid rgba(0, 0, 0, .3);
   background-color: rgba(255, 255, 255, .5);
-}
-.kobo-app nav.toc li {
-  text-transform: capitalize;
 }
