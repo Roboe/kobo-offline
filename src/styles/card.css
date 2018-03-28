@@ -1,9 +1,16 @@
-.card {
-  display: flex;
+.dictionary-list .card {
+  min-width: 10rem;
+  padding: .5rem;
+}
 
+.device-list .card {
   width: 15rem;
   min-height: 15rem;
   padding: 1.5rem;
+}
+
+.card {
+  display: flex;
 
   flex-direction: column;
   justify-content: space-between;
@@ -13,10 +20,18 @@
   background-color: rgba(255, 255, 255, .5);
   box-shadow: 0 5px 10px rgba(0,0,0,.19),0 3px 3px rgba(0,0,0,.23);
 }
+
+.card--title {
+  display: block;
+
+  font-weight: bold;
+}
+
 .card a {
   display: inline-block;
   padding: .25em .5em;
 
+  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
@@ -29,10 +44,4 @@
 .card a:hover {
   color: #ffffff;
   background-color: #52ccf5
-}
-
-.card--title {
-  display: block;
-
-  font-weight: bold;
 }

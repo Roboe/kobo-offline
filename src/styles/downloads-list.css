@@ -1,3 +1,9 @@
+.downloads-list.device-list {}
+
+.downloads-list.dictionary-list {
+  justify-content: flex-start;
+}
+
 .downloads-list {
   display: flex;
 
@@ -10,5 +16,8 @@
 .downloads-list--item {
   list-style: none;
 
-  margin-bottom: 1.5rem;
+  margin: .75rem;
+}
+.downloads-list--item_break {
+  page-break-before: always;
 }
