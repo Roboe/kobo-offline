@@ -28,10 +28,10 @@ export default class DeviceCard extends React.Component {
     const modelWithoutVendor = model.replace('Kobo', '').trim()
 
     return (
-      <li class="downloads-list--item">
+      <li className="downloads-list--item">
         <article className="card">
           <header>
-            <span class="card--title">{ modelWithoutVendor }</span>
+            <span className="card--title">{ modelWithoutVendor }</span>
             <span>{ hardware }</span>
           </header>
 
