@@ -1,7 +1,10 @@
 import { AFFILIATES } from '../constants/affiliates.js'
 import corsFetch from './crossorigin.js'
 
-export const checkUpdateEndpoint = (deviceId, affiliate, currentFwVersion = '0.0', serialNumber = 'N') =>
+export const getDictionaryDownloadUrl = (langCodeOrCodePair) => (langCodeOrCodePair !== 'en')
+  ? `http://download.kobobooks.com/ereader/dictionaries/dicthtml-${langCodeOrCodePair}.zip`
+  : 'http://download.kobobooks.com/ereader/dictionaries/dicthtml.zip'
+
 export const getCheckUpdateUrl = (deviceId, affiliate, currentFwVersion = '0.0', serialNumber = 'N') =>
   `https://api.kobobooks.com/1.0/UpgradeCheck/Device/${deviceId}/${affiliate}/${currentFwVersion}/${serialNumber}`
 
