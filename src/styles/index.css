@@ -33,5 +33,5 @@ body {
 @import './general.css';
 @import './code-blocks.css';
 @import './sectioning.css';
-@import './firmware-downloads.css';
-@import './device-card.css';
+@import './downloads-list.css';
+@import './card.css';
