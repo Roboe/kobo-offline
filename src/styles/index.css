@@ -28,91 +28,10 @@ body {
   text-align: justify;
 }
 
-.kobo-app a {
-  color: #0eb5ed;
-  text-decoration: none;
-}
-.kobo-app code {
-  font-size: 1.2em;
-  padding: .25em .5em;
-  background-color: rgba(0, 0, 0, 0.07);
-}
-.kobo-app pre > code {
-  display: block;
-}
-.kobo-app ol {
-  padding-left: 1.15em;
-}
-.kobo-app summary {
-  cursor: pointer;
-}
 
-.kobo-app .self-link::before {
-  content: '#';
-}
-.kobo-app .self-link {
-  float: left;
-  visibility: hidden;
-
-	padding: .25em .5em;
-  margin-top: -.25em;
-	margin-left: -1.5em;
-
-  font-weight: bold;
-}
-.kobo-app *:hover > .self-link {
-  visibility: visible;
-}
-
-
-/* App structure */
-
-.kobo-app {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
-
-  background-color: #aaaaaa;
-  background-image: radial-gradient(#c0c0c0 15%, transparent 16%),
-                    radial-gradient(#c0c0c0 15%, transparent 16%);
-  background-size: 10px 10px;
-  background-position: 0 0, 5px 5px;
-}
-
-.app-header {
-  height: 3.5rem;
-
-  background-color: #404040;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-              0  6px  6px rgba(0, 0, 0, 0.23);
-}
-.app-header--content {
-  display: flex;
-  align-items: center;
-}
-
-.app-header--content,
-.app-main {
-  height: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-
-  padding: 0 2.25rem;
-}
-
-.app-main {
-  flex-grow: 1;
-
-  background-color: #dddddd;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-              0  6px  6px rgba(0, 0, 0, 0.23);
-}
-
-
-/* Blocks, elements and modifiers (BEM) */
-
-@import './header.css';
+@import './layout-structure.css';
+@import './general.css';
+@import './code-blocks.css';
 @import './sectioning.css';
 @import './firmware-downloads.css';
 @import './device-card.css';
