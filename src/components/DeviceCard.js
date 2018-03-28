@@ -16,7 +16,7 @@ export default class DeviceCard extends React.Component {
 
   renderActions({ downloadUrl, releaseNotesUrl }) {
     return (
-      <div className="device-card--action-list">
+      <div className="card--action-list">
         { downloadUrl && <a href={ downloadUrl }>Download</a> }
         { releaseNotesUrl && <a href={ releaseNotesUrl }>Release notes</a> }
       </div>
@@ -28,10 +28,10 @@ export default class DeviceCard extends React.Component {
     const modelWithoutVendor = model.replace('Kobo', '').trim()
 
     return (
-      <li class="firmware-download-list--item">
-        <article className="device-card">
+      <li class="downloads-list--item">
+        <article className="card">
           <header>
-            <span class="device-card--title">{ modelWithoutVendor }</span>
+            <span class="card--title">{ modelWithoutVendor }</span>
             <span>{ hardware }</span>
           </header>
 
