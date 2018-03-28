@@ -1,0 +1,27 @@
+.kobo-app a {
+  color: #0eb5ed;
+  text-decoration: none;
+}
+.kobo-app ol {
+  padding-left: 1.15em;
+}
+.kobo-app summary {
+  cursor: pointer;
+}
+
+.kobo-app .self-link::before {
+  content: '#';
+}
+.kobo-app .self-link {
+  float: left;
+  visibility: hidden;
+
+	padding: .25em .5em;
+  margin-top: -.25em;
+	margin-left: -1.5em;
+
+  font-weight: bold;
+}
+.kobo-app *:hover > .self-link {
+  visibility: visible;
+}
