@@ -12,6 +12,7 @@ export default () => (
             .forEach((dictionaryLangCodeOrCodePair) => {
               componentsToRender.push(
                 <DictionaryCard
+                  key={ `dictionary-card-${ dictionaryLangCodeOrCodePair }` }
                   languageCode={ currentLang }
                   dictionaryLangCodeOrCodePair={ dictionaryLangCodeOrCodePair }
                 />
