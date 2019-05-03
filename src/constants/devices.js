@@ -46,8 +46,13 @@ export default [
   },
   {
     id: '00000000-0000-0000-0000-000000000374',
-    model: 'Kobo Aura H2O Edition 2',
+    model: 'Kobo Aura H2O Edition 2 v1',
     hardware: 'kobo6',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000378',
+    model: 'Kobo Aura H2O Edition 2 v2',
+    hardware: 'kobo7',
   },
   {
     id: '00000000-0000-0000-0000-000000000373',
@@ -61,7 +66,22 @@ export default [
   },
   {
     id: '00000000-0000-0000-0000-000000000375',
-    model: 'Kobo Aura Edition 2',
+    model: 'Kobo Aura Edition 2 v1',
     hardware: 'kobo6',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000379',
+    model: 'Kobo Aura Edition 2 v2',
+    hardware: 'kobo7',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000376',
+    model: 'Kobo Clara HD',
+    hardware: 'kobo7',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000380',
+    model: 'Kobo Forma',
+    hardware: 'kobo7',
   },
 ]
