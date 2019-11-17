@@ -6,22 +6,17 @@ import DICTIONARIES from '../constants/dictionaries.js'
 export default () => (
   <div className="downloads-list dictionary-list">
     {
-      Object.keys(DICTIONARIES).reduce(
-        (componentsToRender, currentLang) => {
-          DICTIONARIES[currentLang]
-            .forEach((dictionaryLangCodeOrCodePair) => {
-              componentsToRender.push(
-                <DictionaryCard
-                  key={ `dictionary-card-${ dictionaryLangCodeOrCodePair }` }
-                  languageCode={ currentLang }
-                  dictionaryLangCodeOrCodePair={ dictionaryLangCodeOrCodePair }
-                />
-              )
-            })
-          return componentsToRender
-        },
-        []
-      )
+      Object.entries(DICTIONARIES)
+        .flatMap(([language, dictionaries]) => {
+          return dictionaries.map((dictionary) => [language, dictionary])
+        })
+        .map(([language, dictionaryLangCodeOrCodePair]) => (
+          <DictionaryCard
+            key={ `dictionary-card-${ dictionaryLangCodeOrCodePair }` }
+            languageCode={ language }
+            dictionaryLangCodeOrCodePair={ dictionaryLangCodeOrCodePair }
+          />
+        ))
     }
   </div>
 )
