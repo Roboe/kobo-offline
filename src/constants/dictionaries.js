@@ -1,4 +1,4 @@
-export default {
+const DICTIONARIES_BY_LANGUAGE = {
   'en': [ 'en' ],
   'de': [ 'de', 'de-en', 'en-de' ],
   'es': [ 'es', 'es-en', 'en-es' ],
@@ -8,6 +8,14 @@ export default {
   'jp': [ 'jp', 'en-jp' ],
   'pt': [ 'pt', 'pt-en', 'en-pt' ],
 }
+
+export default Object.entries(DICTIONARIES_BY_LANGUAGE)
+  .flatMap(([language, dictionaries]) => {
+    return dictionaries.map((langCodeOrCodePair) => ({
+      language,
+      langCodeOrCodePair,
+    }))
+  })
 
 const LANGUAGE_NAMES = {
   'en': {
