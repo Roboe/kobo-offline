@@ -1,0 +1,54 @@
+{{ define "body" }}
+<div class="kobo-app">
+  <header class="app-header">
+    <div class="app-header--content">
+      <h1 class="app-header--title">{{ .Title | default (.Site.Param "title") }}</h1>
+    </div>
+  </header>
+  <main class="app-main">
+    {{ .TableOfContents }}
+    <nav id="toc" class="toc">
+      <ol>
+        <li>
+          <a href="#first-boot">First boot</a>
+          <ol>
+            <li>
+              <a href="#skip-device-registration">Skip device registration</a>
+              <ol>
+                <li><a href="#easier-option-for-average-users">Easier option for average users</a></li>
+                <li><a href="#straightforward-option-for-tech-savvy-users">Straightforward option for tech savvy users</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a href="#update-firmware">Update e-reader firmware</a>
+          <ol>
+            <li><a href="#how-to-install-firmware">How to install offline firmware updates</a></li>
+            <li><a href="#firmware-downloads">Firmware downloads</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#adding-dictionaries">Adding dictionaries</a>
+          <ol>
+            <li><a href="#how-to-install-dictionaries">How to install dictionaries</a></li>
+            <li><a href="#dictionary-downloads">Dictionary downloads</a></li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+
+    {{ .Content }}
+  </main>
+  <footer class="app-footer">
+    {{ with (.Site.Param "author") -}}
+    <span class="app-footer--credits">Made by <a href="{{ index . "link" }}" target="_blank" rel="noopener noreferrer">{{ index . "name" }}</a> <span class="emoji" role="img" aria-label="Owl">🦉</span></span>
+    {{- end }}
+    {{ with (.Site.Param "source" ) -}}
+    <span class="app-footer--license">
+      <a href="{{ index . "repo" }}" target="_blank" rel="noopener noreferrer">Source</a> ({{ index . "license" }})
+    </span>
+    {{ end -}}
+  </footer>
+</div>
+{{ end }}
