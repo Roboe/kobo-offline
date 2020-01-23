@@ -1,5 +1,3 @@
-/* Global */
-
 *,
 *::before,
 *::after {
@@ -27,11 +25,3 @@ body {
   color: #212121;
   text-align: justify;
 }
-
-
-@import './layout-structure.css';
-@import './general.css';
-@import './code-blocks.css';
-@import './sectioning.css';
-@import './downloads-list.css';
-@import './card.css';
