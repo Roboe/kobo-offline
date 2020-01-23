@@ -1,0 +1,43 @@
+baseURL: https://kobo-offline.virgulilla.com/
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: English
+    title: Kobo Offline
+  es:
+    languageName: Español
+    title: Kobo offline
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: false
+    parser:
+      attribute: false
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+
+params:
+  author:
+    name: "@RoboePi"
+    link: http://virgulilla.com
+  source: 
+    repo: https://gitlab.com/Roboe/kobo-offline
+    license: GPLv3
