@@ -1,0 +1,16 @@
+- id: en
+  translation: inglés
+- id: de
+  translation: alemán
+- id: es
+  translation: español
+- id: fr
+  translation: francés
+- id: it
+  translation: italiano
+- id: nl
+  translation: holandés
+- id: jp
+  translation: japonés
+- id: pt
+  translation: portugués

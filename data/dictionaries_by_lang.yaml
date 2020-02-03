@@ -1,0 +1,57 @@
+en:
+  - id: ~
+    from: en
+de:
+  - id: de
+    from: de
+  - id: de-en
+    from: de
+    to: en
+  - id: en-de
+    from: en
+    to: de
+es:
+  - id: es
+    from: es
+  - id: es-en
+    from: es
+    to: en
+  - id: en-es
+    from: en
+    to: es
+fr:
+  - id: fr
+    from: fr
+  - id: fr-en
+    from: fr
+    to: en
+  - id: en-fr
+    from: en
+    to: fr
+it:
+  - id: it
+    from: it
+  - id: it-en
+    from: it
+    to: en
+  - id: en-it
+    from: en
+    to: it
+nl:
+  - id: nl
+    from: nl
+jp:
+  - id: jp
+    from: jp
+  - id: en-jp
+    from: en
+    to: jp
+pt:
+  - id: pt
+    from: pt
+  - id: pt-en
+    from: pt
+    to: en
+  - id: en-pt
+    from: en
+    to: pt
