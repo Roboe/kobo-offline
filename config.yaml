@@ -10,6 +10,10 @@ languages:
     languageName: Español
     title: Kobo offline
 
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:
