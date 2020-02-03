@@ -1,8 +1,25 @@
-<noscript class="noscript">
-    <div>
-    <p>JavaScript needs to be enabled to fetch firmware links right from Kobo servers. Sorry about that.</p>
-    <p>This site is <a href="https://en.wikipedia.org/wiki/GPLv3">GPLv3-licensed</a> and doesn't track you (Kobo servers may log your IP, though). You can review the source code at its <a href="https://gitlab.com/Roboe/pangrama">GitLab repo</a> before running it.</p>
-    </div>
-</noscript>
+<ul class="downloads-list device-list">
+{{- $affiliate := (index .Site.Data.affiliates 0) }}
+{{- $currentFwVersion := "0.0" }}
+{{- $serialNumber := "N" }}
+{{- range .Site.Data.devices }}
+  {{- $update := getJSON "https://api.kobobooks.com/1.0/UpgradeCheck/Device/" (index . "id") "/" $affiliate "/" $currentFwVersion "/" $serialNumber }}
+  <li class="downloads-list--item">
+    <article class="card">
+      <header>
+        <span class="card--title">{{ replace (index . "model") "Kobo " "" }}</span>
+        <span>{{ (index . "hardware") }}</span>
+      </header>
 
-<div id="react--firmware-downloads-list"></div>
+      <div class="card--action-list">
+        {{- with (index $update "UpgradeURL") }}
+        <a href="{{ . }}">Download</a>
+        {{- end }}
+        {{- with (index $update "ReleaseNoteURL" ) }}
+        <a href="{{ . }}">Release notes</a>
+        {{- end }}
+      </div>
+    </article>
+  </li>
+{{- end }}
+</ul>
