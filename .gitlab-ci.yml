@@ -1,6 +1,6 @@
 variables:
   SOURCE: $CI_PROJECT_DIR
-  BUILD_DESTINATION: $CI_PROJECT_DIR/build
+  BUILD_DESTINATION: $CI_PROJECT_DIR/out
   GIT_PUSH_URL: https://$GITLAB_USER_LOGIN:$ACCESS_TOKEN@github.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git
   GIT_PUSH_BRANCH: master:gh-pages
 
@@ -8,19 +8,15 @@ variables:
 npm_build:
   image: node:latest
   stage: build
-  only:
-    - master
   before_script:
     - npm ci
   script:
     - npm run build
   artifacts:
     paths:
-      - build
+      - out
     expire_in: 1 week
-  cache:
-    paths:
-      - node_modules/
+
 
 git_deploy:
   image: alpine:latest

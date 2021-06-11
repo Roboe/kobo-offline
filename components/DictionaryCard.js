@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { getDictionaryDownloadUrl } from '../helpers/koboapi.js'
 import { getLangName } from '../constants/dictionaries.js'
+import { getDictionaryDownloadUrl } from '../helpers/koboapi.js'
 
 const isSingleCodeLang = (langCodeOrCodePair) => langCodeOrCodePair.length === 2
 
@@ -11,7 +9,8 @@ function langCodeOrCodePairToLabel(langCodeOrCodePair, language = 'en') {
   if (isSingleCodeLang(langCodeOrCodePair)) {
     return getLangName(language)(langCodeOrCodePair)
   } else {
-    return langCodeOrCodePair.split('-')
+    return langCodeOrCodePair
+      .split('-')
       .map(getLangName(language))
       .join(NON_BREAKABLE_HYPHEN)
   }
@@ -19,13 +18,14 @@ function langCodeOrCodePairToLabel(langCodeOrCodePair, language = 'en') {
 
 export default ({ languageCode, dictionaryLangCodeOrCodePair }) => (
   <article
-    className={
-      `card downloads-list--item ${
-        isSingleCodeLang(dictionaryLangCodeOrCodePair) ? 'downloads-list--item_break' : ''
-      }`
-    }>
-    <a href={ getDictionaryDownloadUrl(dictionaryLangCodeOrCodePair) }>
-      { langCodeOrCodePairToLabel(dictionaryLangCodeOrCodePair) }
+    className={`card downloads-list--item ${
+      isSingleCodeLang(dictionaryLangCodeOrCodePair)
+        ? 'downloads-list--item_break'
+        : ''
+    }`}
+  >
+    <a href={getDictionaryDownloadUrl(dictionaryLangCodeOrCodePair)}>
+      {langCodeOrCodePairToLabel(dictionaryLangCodeOrCodePair)}
     </a>
   </article>
 )
