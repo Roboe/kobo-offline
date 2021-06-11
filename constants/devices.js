@@ -75,6 +75,11 @@ export default [
     hardware: 'kobo7',
   },
   {
+    id: '00000000-0000-0000-0000-000000000382',
+    model: 'Kobo Nia',
+    hardware: 'kobo7',
+  },
+  {
     id: '00000000-0000-0000-0000-000000000376',
     model: 'Kobo Clara HD',
     hardware: 'kobo7',
@@ -83,5 +88,15 @@ export default [
     id: '00000000-0000-0000-0000-000000000380',
     model: 'Kobo Forma',
     hardware: 'kobo7',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000384',
+    model: 'Kobo Libra H2O',
+    hardware: 'kobo7',
+  },
+  {
+    id: '00000000-0000-0000-0000-000000000387',
+    model: 'Kobo Elipsa',
+    hardware: 'kobo8',
   },
 ]
