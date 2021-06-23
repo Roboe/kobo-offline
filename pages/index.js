@@ -2,9 +2,9 @@ import Head from 'next/head'
 
 import DictionaryDownloadList from '../components/DictionaryDownloadList'
 import FirmwareDownloadList from '../components/FirmwareDownloadList'
-import DEVICES from '../constants/devices'
-import DEFAULT_AFFILIATE from '../constants/affiliates.js'
-import { fetchLatestUpdate } from '../helpers/koboapi'
+import DEVICES from '../lib/kobo/devices'
+import DEFAULT_AFFILIATE from '../lib/kobo/affiliates.js'
+import { fetchLatestUpdate } from '../lib/kobo/api'
 
 export async function getStaticProps() {
   const allDevicesUpdatePromises = DEVICES.map((device) =>

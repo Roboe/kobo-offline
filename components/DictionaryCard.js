@@ -1,5 +1,5 @@
-import { getLangName } from '../constants/dictionaries.js'
-import { getDictionaryDownloadUrl } from '../helpers/koboapi.js'
+import { getLangName } from '../lib/kobo/dictionaries.js'
+import { getDictionaryDownloadUrl } from '../lib/kobo/api.js'
 
 const isSingleCodeLang = (langCodeOrCodePair) => langCodeOrCodePair.length === 2
 

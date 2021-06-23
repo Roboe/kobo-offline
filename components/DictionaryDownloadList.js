@@ -1,4 +1,4 @@
-import DICTIONARIES from '../constants/dictionaries.js'
+import DICTIONARIES from '../lib/kobo/dictionaries.js'
 
 import DictionaryCard from './DictionaryCard.js'
 

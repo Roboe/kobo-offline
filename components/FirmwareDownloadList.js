@@ -1,4 +1,4 @@
-import DEVICES from '../constants/devices.js'
+import DEVICES from '../lib/kobo/devices.js'
 
 import DeviceCard from './DeviceCard.js'
 

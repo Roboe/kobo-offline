@@ -1,4 +1,4 @@
-import DEFAULT_AFFILIATE from '../constants/affiliates.js'
+import DEFAULT_AFFILIATE from '../lib/kobo/affiliates.js'
 
 export default ({ device, updates }) => {
   const { model, hardware } = device
