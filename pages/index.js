@@ -128,16 +128,16 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
               software (Win/Mac only) or connect the device to a WiFi point.
               This initial setup will do two things: it will force you to create
               a <code>kobobooks.com</code> account, and it will update your
-              device's firmware.
+              device&apos;s firmware.
             </p>
 
             <p>
               Some users would rather not connect their devices to the internet
               or create online accounts because of <strong>privacy</strong>{' '}
               concerns, while others may not be interested in buying e-books on
-              Kobo's online marketplace. Furthermore, there's no setup software
-              for other OSes like <strong>GNU/Linux</strong>, so you're left
-              alone with the WiFi option.
+              Kobo&apos;s online marketplace. Furthermore, there&apos;s no setup
+              software for other OSes like <strong>GNU/Linux</strong>, so
+              you&apos;re left alone with the WiFi option.
             </p>
 
             <section id="skip-device-registration">
@@ -182,13 +182,13 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                     cell value by double-clicking on them.
                   </li>
                   <li>
-                    Enter a random name (e.g. "Foo") in the{' '}
+                    Enter a random name (e.g. &quot;Foo&quot;) in the{' '}
                     <code>UserDisplayName</code> cell.
                   </li>
                   <li>
-                    Enter a random e-mail address (e.g. "bar@baz.qux") in the{' '}
-                    <code>UserEmail</code> cell. It doesn't need to match the
-                    standard e-mail address format.
+                    Enter a random e-mail address (e.g. &quot;bar@baz.qux&quot;)
+                    in the <code>UserEmail</code> cell. It doesn&apos;t need to
+                    match the standard e-mail address format.
                   </li>
                   <li>
                     Save the changes by clicking <code>File</code> &rarr;{' '}
@@ -221,16 +221,17 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                       the following query:{' '}
                       <pre>
                         <code>
-                          INSERT INTO 'user' (UserID, UserKey, UserDisplayName,
-                          UserEmail)
+                          INSERT INTO &apos;user&apos; (UserID, UserKey,
+                          UserDisplayName, UserEmail)
                           <br />
-                          VALUES (3, '', 'Foo', 'bar@baz.qux');
+                          VALUES (3, &apos;&apos;, &apos;Foo&apos;,
+                          &apos;bar@baz.qux&apos;);
                         </code>
                       </pre>
                       You can change those values. <code>UserID</code> is a{' '}
                       <code>NOT NULL</code> <code>PRIMARY KEY</code>.{' '}
-                      <code>UserEmail</code> doesn't need to match a well-formed
-                      e-mail account.
+                      <code>UserEmail</code> doesn&apos;t need to match a
+                      well-formed e-mail account.
                     </li>
                     <li>
                       Exit by running <code>.exit</code>.
@@ -308,8 +309,9 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                   <code>Language and dictionaries</code>.
                 </li>
                 <li>
-                  There you can read: <cite>"X dictionaries installed"</cite>.
-                  Tap the <code>Edit</code> button at the right.
+                  There you can read:{' '}
+                  <cite>&quot;X dictionaries installed&quot;</cite>. Tap the{' '}
+                  <code>Edit</code> button at the right.
                 </li>
                 <li>
                   Enable each dictionary you have downloaded by clicking on the{' '}
