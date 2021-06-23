@@ -1,6 +1,6 @@
 import DEFAULT_AFFILIATE from '../lib/kobo/affiliates.js'
 
-export default ({ device, updates }) => {
+const DeviceCard = ({ device, updates }) => {
   const { model, hardware } = device
 
   const modelWithoutVendor = model.replace('Kobo', '').trim()
@@ -20,3 +20,5 @@ export default ({ device, updates }) => {
     </li>
   )
 }
+
+export default DeviceCard

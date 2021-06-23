@@ -16,7 +16,7 @@ function langCodeOrCodePairToLabel(langCodeOrCodePair, language = 'en') {
   }
 }
 
-export default ({ languageCode, dictionaryLangCodeOrCodePair }) => (
+const DictionaryCard = ({ languageCode, dictionaryLangCodeOrCodePair }) => (
   <article
     className={`card downloads-list--item ${
       isSingleCodeLang(dictionaryLangCodeOrCodePair)
@@ -29,3 +29,5 @@ export default ({ languageCode, dictionaryLangCodeOrCodePair }) => (
     </a>
   </article>
 )
+
+export default DictionaryCard

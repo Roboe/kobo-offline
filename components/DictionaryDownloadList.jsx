@@ -2,7 +2,7 @@ import DICTIONARIES from '../lib/kobo/dictionaries.js'
 
 import DictionaryCard from './DictionaryCard.jsx'
 
-export default () => (
+const DictionaryDownloadList = () => (
   <div className="downloads-list dictionary-list">
     {DICTIONARIES.map(({ language, langCodeOrCodePair }) => (
       <DictionaryCard
@@ -13,3 +13,5 @@ export default () => (
     ))}
   </div>
 )
+
+export default DictionaryDownloadList

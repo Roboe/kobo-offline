@@ -2,7 +2,7 @@ import DEVICES from '../lib/kobo/devices.json'
 
 import DeviceCard from './DeviceCard.jsx'
 
-export default ({ updatesByDeviceId }) => {
+const FirmwareDownloadList = ({ updatesByDeviceId }) => {
   return (
     <ul className="downloads-list device-list">
       {DEVICES.map((device) => (
@@ -15,3 +15,5 @@ export default ({ updatesByDeviceId }) => {
     </ul>
   )
 }
+
+export default FirmwareDownloadList
