@@ -1,6 +1,6 @@
 import DICTIONARIES from '../lib/kobo/dictionaries.js'
 
-import DictionaryCard from './DictionaryCard.js'
+import DictionaryCard from './DictionaryCard.jsx'
 
 export default () => (
   <div className="downloads-list dictionary-list">

@@ -1,6 +1,6 @@
 import DEVICES from '../lib/kobo/devices.js'
 
-import DeviceCard from './DeviceCard.js'
+import DeviceCard from './DeviceCard.jsx'
 
 export default ({ updatesByDeviceId }) => {
   return (
