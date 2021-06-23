@@ -1,4 +1,4 @@
-import DEVICES from '../lib/kobo/devices.js'
+import DEVICES from '../lib/kobo/devices.json'
 
 import DeviceCard from './DeviceCard.jsx'
 
