@@ -23,7 +23,10 @@ export async function getStaticProps() {
   )
 
   return {
-    props: { updatesByDeviceId: allDeviceUpdates },
+    props: {
+      updatesByDeviceId: allDeviceUpdates,
+      lastCheckedUTCDate: new Date().toUTCString(),
+    },
   }
 }
 
@@ -70,7 +73,10 @@ const TOC = {
   },
 }
 
-export default function Home({ updatesByDeviceId }) {
+export default function Home({ updatesByDeviceId, lastCheckedUTCDate }) {
+  const readableFirmwareListUpdateDate = new Date(
+    lastCheckedUTCDate
+  ).toLocaleDateString()
   return (
     <>
       <Head>
@@ -247,6 +253,7 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
             id={TOC.UPDATE_FIRMWARE.DOWNLOADS.id}
             title={TOC.UPDATE_FIRMWARE.DOWNLOADS.title}
           >
+            <p>(List was last updated on: {readableFirmwareListUpdateDate})</p>
             <FirmwareDownloadList updatesByDeviceId={updatesByDeviceId} />
           </Section>
         </Section>
