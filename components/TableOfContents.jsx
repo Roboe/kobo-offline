@@ -1,6 +1,12 @@
+import PropTypes from 'prop-types'
+
 const TocList = ({ unordered, children }) => {
   const List = unordered ? 'ul' : 'ol'
   return <List>{children}</List>
+}
+TocList.propTypes = {
+  unordered: PropTypes.bool,
+  children: PropTypes.node,
 }
 
 const TocItem = ({ branch }) => {
@@ -18,6 +24,13 @@ const TocItem = ({ branch }) => {
     </li>
   )
 }
+TocItem.propTypes = {
+  branch: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    unordered: PropTypes.bool,
+  }).isRequired,
+}
 
 const TableOfContents = ({ toc }) => {
   return (
@@ -31,6 +44,9 @@ const TableOfContents = ({ toc }) => {
       </nav>
     </>
   )
+}
+TableOfContents.propTypes = {
+  toc: PropTypes.objectOf(TocItem.propTypes.branch).isRequired,
 }
 
 export default TableOfContents

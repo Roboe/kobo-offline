@@ -13,5 +13,6 @@ const DictionaryDownloadList = () => (
     ))}
   </div>
 )
+DictionaryDownloadList.propTypes = {}
 
 export default DictionaryDownloadList

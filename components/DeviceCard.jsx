@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import DEFAULT_AFFILIATE from '../lib/kobo/affiliates.js'
 
 const DeviceCard = ({ device, updates }) => {
@@ -19,6 +21,19 @@ const DeviceCard = ({ device, updates }) => {
       </article>
     </li>
   )
+}
+DeviceCard.propTypes = {
+  device: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    hardware: PropTypes.string.isRequired,
+  }).isRequired,
+  updates: PropTypes.shape({
+    [DEFAULT_AFFILIATE]: PropTypes.shape({
+      downloadUrl: PropTypes.string.isRequired,
+      releaseNotesUrl: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 export default DeviceCard

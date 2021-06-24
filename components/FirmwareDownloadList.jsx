@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import DEVICES from '../lib/kobo/devices.json'
 
 import DeviceCard from './DeviceCard.jsx'
@@ -14,6 +16,9 @@ const FirmwareDownloadList = ({ updatesByDeviceId }) => {
       ))}
     </ul>
   )
+}
+FirmwareDownloadList.propTypes = {
+  updatesByDeviceId: PropTypes.objectOf(DeviceCard.propTypes.updates),
 }
 
 export default FirmwareDownloadList

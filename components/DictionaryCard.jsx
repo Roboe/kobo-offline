@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import {
   getLangName,
   getDictionaryDownloadUrl,
@@ -31,5 +32,9 @@ const DictionaryCard = ({ languageCode, dictionaryLangCodeOrCodePair }) => (
     </a>
   </article>
 )
+DictionaryCard.propTypes = {
+  languageCode: PropTypes.string,
+  dictionaryLangCodeOrCodePair: PropTypes.string.isRequired,
+}
 
 export default DictionaryCard

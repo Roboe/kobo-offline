@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import Heading from './Heading.jsx'
 
 const Section = ({ headingLevel, id, title, lead, children }) => {
@@ -14,6 +16,13 @@ const Section = ({ headingLevel, id, title, lead, children }) => {
       {children}
     </section>
   )
+}
+Section.propTypes = {
+  headingLevel: Heading.propTypes.level,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  lead: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Section
