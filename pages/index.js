@@ -2,6 +2,10 @@ import Head from 'next/head'
 
 import DictionaryDownloadList from '../components/DictionaryDownloadList.jsx'
 import FirmwareDownloadList from '../components/FirmwareDownloadList.jsx'
+import Heading from '../components/Heading.jsx'
+import Section from '../components/Section.jsx'
+import TableOfContents from '../components/TableOfContents.jsx'
+
 import DEVICES from '../lib/kobo/devices.json'
 import DEFAULT_AFFILIATE from '../lib/kobo/affiliates.js'
 import { fetchLatestUpdate } from '../lib/kobo/api.js'
@@ -21,6 +25,49 @@ export async function getStaticProps() {
   return {
     props: { updatesByDeviceId: allDeviceUpdates },
   }
+}
+
+const TOC = {
+  FIRST_BOOT: {
+    title: 'First boot',
+    id: 'first-boot',
+    SKIP_REGISTRATION: {
+      title: 'Skip device registration',
+      id: 'skip-device-registration',
+      AVERAGE_USERS: {
+        title: 'Easier option for average users',
+        id: 'easier-option-for-average-users',
+      },
+      TECH_SAVVY_USERS: {
+        title: 'Straightforward option for tech savvy users',
+        id: 'straightforward-option-for-tech-savvy-users',
+      },
+    },
+  },
+  UPDATE_FIRMWARE: {
+    id: 'update-firmware',
+    title: 'Update E-reader Firmware',
+    HOW_TO: {
+      id: 'how-to-install-firmware',
+      title: 'How to Install Offline Firmware Updates',
+    },
+    DOWNLOADS: {
+      id: 'firmware-downloads',
+      title: 'Firmware Downloads',
+    },
+  },
+  ADD_DICTIONARIES: {
+    id: 'adding-dictionaries',
+    title: 'Adding Dictionaries',
+    HOW_TO: {
+      id: 'how-to-install-dictionaries',
+      title: 'How to Install Dictionaries',
+    },
+    DOWNLOADS: {
+      id: 'dictionary-downloads',
+      title: 'Dictionary Downloads',
+    },
+  },
 }
 
 export default function Home({ updatesByDeviceId }) {
@@ -53,75 +100,21 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
       <div className="kobo-app">
         <header className="app-header">
           <div className="app-header--content">
-            <h1 className="app-header--title">Kobo Offline</h1>
+            <Heading level={1} className="app-header--title">
+              Kobo Offline
+            </Heading>
           </div>
         </header>
         <main className="app-main">
-          <nav id="toc" className="toc">
-            <ol>
-              <li>
-                <a href="#first-boot">First boot</a>
-                <ol>
-                  <li>
-                    <a href="#skip-device-registration">
-                      Skip device registration
-                    </a>
-                    <ol>
-                      <li>
-                        <a href="#easier-option-for-average-users">
-                          Easier option for average users
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#straightforward-option-for-tech-savvy-users">
-                          Straightforward option for tech savvy users
-                        </a>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#update-firmware">Update e-reader firmware</a>
-                <ol>
-                  <li>
-                    <a href="#how-to-install-firmware">
-                      How to install offline firmware updates
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#firmware-downloads">Firmware downloads</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#adding-dictionaries">Adding dictionaries</a>
-                <ol>
-                  <li>
-                    <a href="#how-to-install-dictionaries">
-                      How to install dictionaries
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#dictionary-downloads">Dictionary downloads</a>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </nav>
-          <section id="first-boot">
-            <header>
-              <h2>
-                <a className="self-link" href="#first-boot"></a>
-                <span>First boot</span>
-                {/* https://www.darkcoding.net/misc/kobo-ereader-touch-on-ubuntu-linux/ */}
-              </h2>
-              <p>
-                Avoid being forced to connect your e-reader to the internet and
-                to create a Kobo account
-              </p>
-            </header>
-
+          <TableOfContents toc={TOC} />
+          <Section
+            headingLevel={2}
+            id={TOC.FIRST_BOOT.id}
+            title={TOC.FIRST_BOOT.title}
+            lead="Avoid being forced to connect your e-reader to the internet and
+                to create a Kobo account"
+          >
+            {/* https://www.darkcoding.net/misc/kobo-ereader-touch-on-ubuntu-linux/ */}
             <p>
               When you start a Kobo e-reader for the first time, it{' '}
               <strong>blocks</strong> any interaction until you run the setup
@@ -140,12 +133,12 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
               you&apos;re left alone with the WiFi option.
             </p>
 
-            <section id="skip-device-registration">
-              <h3>
-                <a className="self-link" href="#skip-device-registration"></a>
-                <span>Skip device registration</span>
-                {/* https://www.mobileread.com/forums/showthread.php?t=171664 */}
-              </h3>
+            <Section
+              headingLevel={3}
+              id={TOC.FIRST_BOOT.SKIP_REGISTRATION.id}
+              title={TOC.FIRST_BOOT.SKIP_REGISTRATION.title}
+            >
+              {/* https://www.mobileread.com/forums/showthread.php?t=171664 */}
 
               <p>
                 There is a simple way to by-pass the above mentioned
@@ -155,14 +148,11 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                 to do it: one for average users, and other for tech savvy ones.
               </p>
 
-              <section id="easier-option-for-average-users">
-                <h4>
-                  <a
-                    className="self-link"
-                    href="#easier-option-for-average-users"
-                  ></a>
-                  <span>Easier option for average users</span>
-                </h4>
+              <Section
+                headingLevel={4}
+                id={TOC.FIRST_BOOT.SKIP_REGISTRATION.AVERAGE_USERS.id}
+                title={TOC.FIRST_BOOT.SKIP_REGISTRATION.AVERAGE_USERS.title}
+              >
                 <ol>
                   <li>
                     Install{' '}
@@ -195,16 +185,13 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                     <code>Save changes</code>.
                   </li>
                 </ol>
-              </section>
+              </Section>
 
-              <section id="straightforward-option-for-tech-savvy-users">
-                <h4>
-                  <a
-                    className="self-link"
-                    href="#straightforward-option-for-tech-savvy-users"
-                  ></a>
-                  <span>Straightforward option for tech savvy users</span>
-                </h4>
+              <Section
+                headingLevel={4}
+                id={TOC.FIRST_BOOT.SKIP_REGISTRATION.TECH_SAVVY_USERS.id}
+                title={TOC.FIRST_BOOT.SKIP_REGISTRATION.TECH_SAVVY_USERS.title}
+              >
                 <details>
                   <summary>
                     Assuming you already have a command-line shell for SQLite
@@ -238,25 +225,21 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                     </li>
                   </ol>
                 </details>
-              </section>
-            </section>
-          </section>
+              </Section>
+            </Section>
+          </Section>
 
-          <section id="update-firmware">
-            <header>
-              <h2>
-                <a className="self-link" href="#update-firmware"></a>
-                <span>Update E-reader Firmware</span>
-              </h2>
-              <p>Get the latest official firmware right from Kobo</p>
-            </header>
-
-            <section id="how-to-install-firmware">
-              <h3>
-                <a className="self-link" href="#how-to-install-firmware"></a>
-                <span>How to Install Offline Firmware Updates</span>
-              </h3>
-
+          <Section
+            headingLevel={2}
+            id={TOC.UPDATE_FIRMWARE.id}
+            title={TOC.UPDATE_FIRMWARE.title}
+            lead="Get the latest official firmware right from Kobo"
+          >
+            <Section
+              headingLevel={3}
+              id={TOC.UPDATE_FIRMWARE.HOW_TO.id}
+              title={TOC.UPDATE_FIRMWARE.HOW_TO.title}
+            >
               <p>
                 Download the appropriate ZIP file for your device from the list
                 below. Then connect your Kobo e-reader to your computer using a
@@ -265,35 +248,27 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                 your Kobo e-reader with security and your e-reader will refresh
                 itself and start the updating procedure automatically.
               </p>
-            </section>
+            </Section>
 
-            <section id="firmware-downloads">
-              <h3>
-                <a className="self-link" href="#firmware-downloads"></a>
-                <span>Firmware Downloads</span>
-              </h3>
-
+            <Section
+              headingLevel={3}
+              id={TOC.UPDATE_FIRMWARE.DOWNLOADS.id}
+              title={TOC.UPDATE_FIRMWARE.DOWNLOADS.title}
+            >
               <FirmwareDownloadList updatesByDeviceId={updatesByDeviceId} />
-            </section>
-          </section>
-          <section id="adding-dictionaries">
-            <header>
-              <h2>
-                <a className="self-link" href="#adding-dictionaries"></a>
-                <span>Adding Dictionaries</span>
-              </h2>
-              <p>Get official dictionaries right from Kobo</p>
-            </header>
-
-            <section id="how-to-install-dictionaries">
-              <h3>
-                <a
-                  className="self-link"
-                  href="#how-to-install-dictionaries"
-                ></a>
-                <span>How to Install Dictionaries</span>
-              </h3>
-
+            </Section>
+          </Section>
+          <Section
+            headingLevel={2}
+            id={TOC.ADD_DICTIONARIES.id}
+            title={TOC.ADD_DICTIONARIES.title}
+            lead="Get official dictionaries right from Kobo"
+          >
+            <Section
+              headingLevel={3}
+              id={TOC.ADD_DICTIONARIES.HOW_TO.id}
+              title={TOC.ADD_DICTIONARIES.HOW_TO.title}
+            >
               <ol>
                 <li>Download the appropriate ZIP files from the list below.</li>
                 <li>Connect the Kobo e-reader to your PC with an USB cable.</li>
@@ -318,18 +293,17 @@ if (window.location.hostname !== 'localhost' && window.location.protocol === 'ht
                   <code>+</code> button at their side.
                 </li>
               </ol>
-            </section>
+            </Section>
 
-            <section>
-              <h3 id="dictionary-downloads">
-                <a className="self-link" href="#dictionary-downloads"></a>
-                <span>Dictionary Downloads</span>
-                {/* https://www.mobileread.com/forums/showthread.php?t=196931 */}
-              </h3>
-
+            <Section
+              headingLevel={3}
+              id={TOC.ADD_DICTIONARIES.DOWNLOADS.id}
+              title={TOC.ADD_DICTIONARIES.DOWNLOADS.title}
+            >
+              {/* https://www.mobileread.com/forums/showthread.php?t=196931 */}
               <DictionaryDownloadList />
-            </section>
-          </section>
+            </Section>
+          </Section>
         </main>
         <footer className="app-footer">
           <span className="app-footer--credits">
