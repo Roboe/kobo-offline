@@ -1,5 +1,5 @@
 {
-  "extends": "next",
+  "extends": "react-app",
   "rules": {
     "import/extensions": ["error", "ignorePackages"]
   }

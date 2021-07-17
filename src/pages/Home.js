@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Helmet } from 'react-helmet'
 
 import DictionaryDownloadList from '../components/DictionaryDownloadList.jsx'
 import FirmwareDownloadList from '../components/FirmwareDownloadList.jsx'
@@ -79,7 +79,7 @@ export default function Home({ updatesByDeviceId, lastCheckedUTCDate }) {
   ).toLocaleDateString()
   return (
     <>
-      <Head>
+      <Helmet>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -107,7 +107,7 @@ if (
         />
 
         <title>Kobo Offline</title>
-      </Head>
+      </Helmet>
 
       <Layout>
         <TableOfContents toc={TOC} />

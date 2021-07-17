@@ -7,7 +7,7 @@ npm_build:
     - npm run build
   artifacts:
     paths:
-      - out
+      - dist
     expire_in: 1 week
 
 pages:
@@ -17,8 +17,8 @@ pages:
     - master
   when: on_success
   script:
-    - mv ./public ./public.nextjs
-    - mv ./out ./public
+    - mv ./public ./public.react-static
+    - mv ./dist ./public
   artifacts:
     paths:
       - public
