@@ -1,16 +1,13 @@
-import DICTIONARIES from '../lib/kobo/dictionaries.js'
+import DICTIONARIES, { composeDictionaryId } from '../lib/kobo/dictionaries.js'
 
 import DictionaryCard from './DictionaryCard.jsx'
 
 const DictionaryDownloadList = () => (
   <div className="downloads-list dictionary-list">
-    {DICTIONARIES.map(({ language, langCodeOrCodePair }) => (
-      <DictionaryCard
-        key={`dictionary-card-${langCodeOrCodePair}`}
-        languageCode={language}
-        dictionaryLangCodeOrCodePair={langCodeOrCodePair}
-      />
-    ))}
+    {DICTIONARIES.map((dictionary) => {
+      const dictionaryKey = `dictionary-card-${composeDictionaryId(dictionary)}`
+      return <DictionaryCard key={dictionaryKey} dictionary={dictionary} />
+    })}
   </div>
 )
 DictionaryDownloadList.propTypes = {}

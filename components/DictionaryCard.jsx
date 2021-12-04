@@ -1,40 +1,47 @@
 import PropTypes from 'prop-types'
 import {
-  getLangName,
-  getDictionaryDownloadUrl,
+  DICTIONARY_TYPE_LEXICON,
+  DICTIONARY_TYPE_TRANSLATION,
+  labelDictionary,
 } from '../lib/kobo/dictionaries.js'
 
-const isSingleCodeLang = (langCodeOrCodePair) => langCodeOrCodePair.length === 2
-
-function langCodeOrCodePairToLabel(langCodeOrCodePair, language = 'en') {
-  const NON_BREAKABLE_HYPHEN = '\u2011'
-
-  if (isSingleCodeLang(langCodeOrCodePair)) {
-    return getLangName(language)(langCodeOrCodePair)
-  } else {
-    return langCodeOrCodePair
-      .split('-')
-      .map(getLangName(language))
-      .join(NON_BREAKABLE_HYPHEN)
-  }
+function preventBreakingAtHyphens(label) {
+  const nonBreakableHyphen = '\u2011'
+  return label.replace('-', nonBreakableHyphen)
 }
 
-const DictionaryCard = ({ languageCode, dictionaryLangCodeOrCodePair }) => (
-  <article
-    className={`card downloads-list--item ${
-      isSingleCodeLang(dictionaryLangCodeOrCodePair)
-        ? 'downloads-list--item_break'
-        : ''
-    }`}
-  >
-    <a href={getDictionaryDownloadUrl(dictionaryLangCodeOrCodePair)}>
-      {langCodeOrCodePairToLabel(dictionaryLangCodeOrCodePair)}
-    </a>
-  </article>
-)
+function selectDictionaryDownloadUrl(dictionary) {
+  return dictionary.downloads.v3 ?? dictionary.downloads.v1 ?? null
+}
+
+const DictionaryCard = ({ dictionary }) => {
+  const shouldBreakANewRow = dictionary.type === DICTIONARY_TYPE_LEXICON
+  const dictionaryLabel = preventBreakingAtHyphens(
+    labelDictionary()(dictionary)
+  )
+  return (
+    <article
+      className={`card downloads-list--item ${
+        shouldBreakANewRow ? 'downloads-list--item_break' : ''
+      }`}
+    >
+      <a href={selectDictionaryDownloadUrl(dictionary)}>{dictionaryLabel}</a>
+    </article>
+  )
+}
 DictionaryCard.propTypes = {
-  languageCode: PropTypes.string,
-  dictionaryLangCodeOrCodePair: PropTypes.string.isRequired,
+  dictionary: PropTypes.shape({
+    type: PropTypes.oneOf([
+      DICTIONARY_TYPE_LEXICON,
+      DICTIONARY_TYPE_TRANSLATION,
+    ]).isRequired,
+    sourceLanguageCode: PropTypes.string.isRequired,
+    targetLanguageCode: PropTypes.string,
+    downloads: PropTypes.shape({
+      v1: PropTypes.string,
+      v3: PropTypes.string,
+    }).isRequired,
+  }),
 }
 
 export default DictionaryCard

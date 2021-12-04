@@ -1,0 +1,235 @@
+[
+  {
+    "type": "definition",
+    "sourceLanguageCode": "ca",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-ca.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "de",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-de.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-de.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "es",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-es.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-es.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "fr",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-fr.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-fr.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "it",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-it.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-it.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "ja",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-jp.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-ja.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "nl",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-nl.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "pt",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-pt.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-pt.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "tr",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-tr.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "zh-CN",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-zh-CN.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "en",
+    "targetLanguageCode": "zh-TW",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-zh-TW.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "de",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-de.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-de.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "de",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-de-en.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-de-en.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "es",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-es.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-es.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "es",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-es-en.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-es-en.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "fr",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-fr.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-fr.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "fr",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-fr-en.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-fr-en.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "fr",
+    "targetLanguageCode": "nl",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-fr.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "it",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-it.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-it.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "it",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-it-en.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-it-en.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "ja",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-jp.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-jaxxdjs.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "nl",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-nl.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-nl.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "nl",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-nl-en.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "nl",
+    "targetLanguageCode": "fr",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-nl-fr.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "pt",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-pt.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-pt.zip"
+    }
+  },
+  {
+    "type": "translation",
+    "sourceLanguageCode": "pt",
+    "targetLanguageCode": "en",
+    "downloads": {
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-pt-en.zip",
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-pt-en.zip"
+    }
+  },
+  {
+    "type": "definition",
+    "sourceLanguageCode": "sv",
+    "downloads": {
+      "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-sv.zip"
+    }
+  }
+]
