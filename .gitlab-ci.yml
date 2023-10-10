@@ -4,10 +4,12 @@ npm_build:
   before_script:
     - npm ci
   script:
+    - export PUBLIC_CANONICAL_URL="https://kobo-offline.virgulilla.com"
+    - export PUBLIC_GITLAB_PAGES_URL="https://roboe.gitlab.io/kobo-offline"
     - npm run build
   artifacts:
     paths:
-      - out
+      - build
     expire_in: 1 week
 
 pages:
@@ -17,8 +19,8 @@ pages:
     - master
   when: on_success
   script:
-    - mv ./public ./public.nextjs
-    - mv ./out ./public
+    - mv ./public ./public.source
+    - mv ./build ./public
   artifacts:
     paths:
       - public

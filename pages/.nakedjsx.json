@@ -1,0 +1,17 @@
+{
+  "pathAliases": {},
+  "definitions": {},
+  "browserslistTargetQuery": "defaults",
+  "plugins": {},
+  "importResolveOverrides": {},
+  "output": {
+    "pageJs": {
+      "sourcemaps": "auto"
+    },
+    "clientJs": {
+      "sourcemaps": "auto"
+    },
+    "dir": "../build"
+  },
+  "pretty": false
+}

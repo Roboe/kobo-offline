@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import DEVICES from '../lib/kobo/devices.json'
+import DEVICES from '../lib/kobo/devices.js'
 
 import DeviceCard from './DeviceCard.jsx'
 

@@ -1,6 +1,0 @@
-{
-  "extends": "next",
-  "rules": {
-    "import/extensions": ["error", "ignorePackages"]
-  }
-}
