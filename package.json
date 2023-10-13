@@ -11,6 +11,7 @@
     "prettier": "^2.3.1"
   },
   "scripts": {
+    "cache:dicts": "node scripts/download-all-dictionaries.mjs",
     "clean-build": "rm -rf build && cp -rf public build",
     "predev": "npm run clean-build",
     "dev": "nakedjsx pages --pretty --dev",
