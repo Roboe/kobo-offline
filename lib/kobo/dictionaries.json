@@ -55,7 +55,7 @@
     "sourceLanguageCode": "en",
     "targetLanguageCode": "ja",
     "downloads": {
-      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-jp.zip",
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-en-ja.zip",
       "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-en-ja.zip"
     }
   },
@@ -180,7 +180,7 @@
     "type": "definition",
     "sourceLanguageCode": "ja",
     "downloads": {
-      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-jp.zip",
+      "v1": "http://download.kobobooks.com/ereader/dictionaries/dicthtml-ja.zip",
       "v3": "http://download.kobobooks.com/ereader/dictionaries/v3/dicthtml-jaxxdjs.zip"
     }
   },
