@@ -6,7 +6,7 @@ import * as path from 'node:path'
 import { Readable } from 'node:stream'
 import * as streamp from 'node:stream/promises'
 
-const DICTIONARIES_DATA_PATH = path.resolve('./lib/kobo/dictionaries.json')
+const DICTIONARIES_DATA_PATH = path.resolve('./data/kobo/dictionaries.json')
 const CACHE_BASE_PATH = path.resolve('./.cache')
 
 const readDictionariesFile = async (path) => {

@@ -8,6 +8,9 @@ import styleSectioning from '::../assets/styles/sectioning.css'
 import styleDownloadsList from '::../assets/styles/downloads-list.css'
 import styleCard from '::../assets/styles/card.css'
 
+import DEVICES from ':json:../data/kobo/devices.json'
+import DICTIONARIES from ':json:../data/kobo/dictionaries.json'
+
 import Home from '../components/Home.jsx'
 import processHomeProps from './index-props.js'
 
@@ -15,7 +18,7 @@ const PUBLIC_CANONICAL_URL =
   process.env.PUBLIC_CANONICAL_URL ?? 'http://localhost:8999'
 const PUBLIC_GITLAB_PAGES_URL = process.env.PUBLIC_GITLAB_PAGES_URL ?? undefined
 
-const homeProps = await processHomeProps()
+const homeProps = await processHomeProps(DEVICES, DICTIONARIES)
 
 Page.Create('en')
 Page.AppendHead(<meta charSet="utf-8" />)

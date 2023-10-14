@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types'
 
-import DEVICES from '../lib/kobo/devices.js'
-
 import DeviceCard from './DeviceCard.jsx'
 
-const FirmwareDownloadList = ({ updatesByDeviceId }) => {
+const FirmwareDownloadList = ({ devices, updatesByDeviceId }) => {
   return (
     <ul className="downloads-list device-list">
-      {DEVICES.map((device) => (
+      {devices.map((device) => (
         <DeviceCard
           key={device.id}
           device={device}
@@ -18,6 +16,7 @@ const FirmwareDownloadList = ({ updatesByDeviceId }) => {
   )
 }
 FirmwareDownloadList.propTypes = {
+  devices: PropTypes.arrayOf(DeviceCard.propTypes.device).isRequired,
   updatesByDeviceId: PropTypes.objectOf(DeviceCard.propTypes.updates),
 }
 

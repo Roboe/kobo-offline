@@ -47,7 +47,12 @@ const TOC = {
   },
 }
 
-export default function Home({ updatesByDeviceId, lastCheckedUTCDate }) {
+export default function Home({
+  dictionaries,
+  devices,
+  updatesByDeviceId,
+  lastCheckedUTCDate,
+}) {
   const readableFirmwareListUpdateDate = new Date(
     lastCheckedUTCDate
   ).toLocaleDateString()
@@ -204,7 +209,10 @@ export default function Home({ updatesByDeviceId, lastCheckedUTCDate }) {
             title={TOC.UPDATE_FIRMWARE.DOWNLOADS.title}
           >
             <p>(List was last updated on: {readableFirmwareListUpdateDate})</p>
-            <FirmwareDownloadList updatesByDeviceId={updatesByDeviceId} />
+            <FirmwareDownloadList
+              devices={devices}
+              updatesByDeviceId={updatesByDeviceId}
+            />
           </Section>
         </Section>
         <Section
@@ -250,7 +258,7 @@ export default function Home({ updatesByDeviceId, lastCheckedUTCDate }) {
             title={TOC.ADD_DICTIONARIES.DOWNLOADS.title}
           >
             {/* https://www.mobileread.com/forums/showthread.php?t=196931 */}
-            <DictionaryDownloadList />
+            <DictionaryDownloadList dictionaries={dictionaries} />
           </Section>
         </Section>
       </Layout>
