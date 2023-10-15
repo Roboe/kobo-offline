@@ -2,7 +2,9 @@
   "pathAliases": {},
   "definitions": {},
   "browserslistTargetQuery": "defaults",
-  "plugins": {},
+  "plugins": {
+    "sass": "../lib/nakedjsx/plugin-scss.mjs"
+  },
   "importResolveOverrides": {},
   "output": {
     "pageJs": {

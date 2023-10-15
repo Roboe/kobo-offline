@@ -5,7 +5,8 @@
   "dependencies": {
     "nakedjsx": "^0.14.2",
     "node-fetch": "^3.3.2",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "sass": "^1.69.3"
   },
   "devDependencies": {
     "prettier": "^2.3.1"
