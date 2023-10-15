@@ -8,15 +8,27 @@ const DeviceCard = ({ device, updates }) => {
   const modelWithoutVendor = model.replace('Kobo', '').trim()
   const { downloadUrl, releaseNotesUrl } = updates[DEFAULT_AFFILIATE]
   return (
-    <li className="downloads-list--item">
+    <li className="column is-half">
       <article className="card">
-        <header>
-          <span className="card--title">{modelWithoutVendor}</span>
-          <span>{hardware}</span>
+        <header className="card-header is-shadowless">
+          <div className="card-header-title">
+            <span className="title is-5">{modelWithoutVendor}</span>
+          </div>
+          <div className="card-header-icon">
+            <span className="tag is-primary is-light">{hardware}</span>
+          </div>
         </header>
-        <div className="card--action-list">
-          {downloadUrl && <a href={downloadUrl}>Download</a>}
-          {releaseNotesUrl && <a href={releaseNotesUrl}>Release notes</a>}
+        <div className="card-footer">
+          {releaseNotesUrl && (
+            <a className="card-footer-item" href={releaseNotesUrl}>
+              Release notes
+            </a>
+          )}
+          {downloadUrl && (
+            <a className="card-footer-item is-primary" href={downloadUrl}>
+              Download
+            </a>
+          )}
         </div>
       </article>
     </li>

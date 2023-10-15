@@ -1,7 +1,240 @@
-@use "./index.css";
-@use "./layout-structure.css";
-@use "./general.css";
-@use "./code-blocks.css";
-@use "./sectioning.css";
-@use "./downloads-list.css";
-@use "./card.css";
+@import '../../node_modules/@fontsource/gelasio/400';
+
+// Bulma theme configuration is done by assigning values to variables
+// https://bulma.io/documentation/customize/variables
+
+// -- Initial variables (with a literal value)
+
+// -- Derived variables (that take value from other variables)
+
+$primary: #0eb5ed;
+$primary-dark: #09799f;
+$link: $primary-dark;
+$family-primary: 'Georgia', 'Gelasio', serif;
+$family-monospace: 'Courier New', 'Liberation Mono', monospace;
+
+// -- Generic variables (for HTML elements without Bulma classes)
+
+// -- Element/component variables (specific to a Bulma element/component)
+
+$container-max-width: 720;
+
+$button-radius: 0;
+$card-radius: 0;
+$panel-radius: 0;
+$tag-radius: 0;
+
+$notification-code-background-color: transparent;
+
+// -- Import Bulma styles
+
+@import '../../node_modules/bulma/bulma.sass';
+
+// -- Bulma overrides
+
+.button {
+  // Unavailable through Bulma variables
+  &.is-primary {
+    // Contrast improvement (a11y)
+    &.is-outlined {
+      color: $primary-dark;
+      border-color: $primary-dark;
+    }
+  }
+}
+
+.card {
+  .card-footer {
+    // Unavailable through Bulma customizations
+    a.card-footer-item {
+      // Contrast improvement (a11y)
+      &:hover {
+        background-color: $grey;
+        color: $white;
+      }
+
+      // Primary color
+      &.is-primary {
+        background-color: $primary;
+        color: $white;
+
+        // Contrast improvement (a11y)
+        &:hover {
+          background-color: $primary-dark;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  // Unavailable through Bulma variables
+  // Compensate bottom margin
+  pre:not(:last-child) {
+    margin-top: 0.75em;
+  }
+}
+
+.panel {
+  // Unavailable through Bulma variables
+  .panel-tabs {
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-darker;
+    }
+
+    a.is-active {
+      border-bottom: 4px solid $grey-darker;
+    }
+  }
+
+  // Unavailable through Bulma variables
+  .panel-block {
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-lighter;
+    }
+  }
+  // Unavailable through Bulma variables (consistently)
+  a.panel-block:hover {
+    color: $light;
+    background-color: $primary; // $panel-block-hover-background-color
+  }
+}
+
+.table {
+  // Unavailable through Bulma variables (consistently)
+  thead {
+    td,
+    th {
+      color: $grey-darker; // $table-head-cell-color
+      border-width: 0 0 1px; // $table-head-cell-border-width
+      border-color: $grey-darker;
+    }
+  }
+
+  // Requires redeclaration of Bulma initial variables
+  // (and would be delocalized from thead customizations)
+  td,
+  th {
+    border: solid $grey-lighter; // $table-cell-border
+    border-width: 0 0 1px; // $table-cell-border-width
+  }
+}
+
+.tag {
+  // Unavailable through Bulma variables
+  font-family: $family-monospace;
+
+  &:not(body) {
+    // Unavailable through Bulma variables
+    &.is-dark {
+      background-color: $grey-dark;
+      color: $white;
+    }
+  }
+}
+
+code {
+  // Unavailable through Bulma variables
+  // Fixes irregular vertical padding
+  padding-bottom: 0.125em;
+
+  // Requires redeclaration of Bulma initial variables
+  background-color: $grey-dark; // $code-background
+  color: $white; // $code
+}
+
+// -- Custom CSS
+
+body {
+  @extend .has-background-dark;
+
+  background-image: radial-gradient($grey-dark 15%, transparent 16%),
+    radial-gradient($grey-dark 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+
+  & > .container {
+    & > .navbar {
+      @extend .has-text-light;
+      background-color: transparent;
+    }
+
+    & > .footer {
+      @extend .has-text-light;
+      background-color: transparent;
+    }
+  }
+}
+
+a.self-link {
+  color: inherit;
+
+  &::after {
+    @extend .is-size-6;
+    content: '\1F517';
+    margin-left: 0.25em;
+    visibility: hidden;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    &::after {
+      visibility: visible;
+    }
+  }
+}
+
+.content {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  q.gui {
+    padding: 0.125em 0.5em;
+    line-height: 1.75em;
+    white-space: nowrap;
+
+    border: 1px solid $primary-dark;
+    color: $primary-dark;
+
+    &::after,
+    &::before {
+      content: unset;
+    }
+  }
+}
+
+.downloads-list {
+  .card {
+    // Align cards with a wrapped title
+    .card-header {
+      min-height: 4.5rem;
+    }
+
+    // HACK Place uninteractive tags
+    .card-header-icon {
+      cursor: unset;
+    }
+  }
+}
+
+.title:not(.is-spaced) + .subtitle {
+  font-variant: petite-caps;
+}
+
+// HACK Using Bulma panels with a hierarchical table of contents
+.panel {
+  li {
+    list-style: none;
+  }
+  li a {
+    padding-left: 2.5em;
+  }
+  li li a {
+    padding-left: 3.5em;
+  }
+  li li li a {
+    padding-left: 4.5em;
+  }
+}

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/gelasio": "^5.0.8",
+    "bulma": "^0.9.4",
     "nakedjsx": "^0.14.2",
     "node-fetch": "^3.3.2",
     "prop-types": "^15.8.1",
@@ -13,10 +15,12 @@
   },
   "scripts": {
     "cache:dicts": "node scripts/download-all-dictionaries.mjs",
-    "clean-build": "rm -rf build && cp -rf public build",
-    "predev": "npm run clean-build",
+    "copy:public": "cp -rf public build",
+    "copy:fonts": "mkdir -p build/files && cp -rf node_modules/@fontsource/gelasio/files/*-400-normal.woff2 build/files",
+    "build:prepare": "rm -rf build && npm run copy:public && npm run copy:fonts",
+    "predev": "npm run build:prepare",
     "dev": "nakedjsx pages --pretty --dev",
-    "prebuild": "npm run clean-build",
+    "prebuild": "npm run build:prepare",
     "build": "nakedjsx pages"
   }
 }

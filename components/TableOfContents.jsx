@@ -1,21 +1,15 @@
 import PropTypes from 'prop-types'
 
-const TocList = ({ children }) => {
-  return <ol>{children}</ol>
-}
-TocList.propTypes = {
-  children: PropTypes.node,
-}
-
 const TocItem = ({ branch }) => {
   const { id, title, ...rest } = branch
   const branchesEntries = Object.entries(rest).filter(
     ([key, value]) => typeof value === 'object' && !Array.isArray(value)
   )
-
   return (
     <li>
-      <a href={`#${id}`}>{title}</a>
+      <a href={'#' + id} className="panel-block">
+        {title}
+      </a>
       {branchesEntries.length > 0 ? (
         <TocList>
           {branchesEntries.map(([key, branch]) => (
@@ -33,17 +27,25 @@ TocItem.propTypes = {
   }).isRequired,
 }
 
+const TocList = ({ children }) => {
+  return <ol>{children}</ol>
+}
+TocList.propTypes = {
+  children: PropTypes.node,
+}
+
 const TableOfContents = ({ toc }) => {
   return (
-    <>
-      <nav id="toc" className="toc">
-        <TocList>
-          {Object.entries(toc).map(([key, branch]) => (
-            <TocItem key={key} branch={branch} />
-          ))}
-        </TocList>
-      </nav>
-    </>
+    <nav id="toc" className="panel is-shadowless">
+      <p className="panel-tabs is-justify-content-flex-start">
+        <a className="is-active">Index</a>
+      </p>
+      <TocList>
+        {Object.entries(toc).map(([key, branch]) => (
+          <TocItem key={key} branch={branch} />
+        ))}
+      </TocList>
+    </nav>
   )
 }
 TableOfContents.propTypes = {

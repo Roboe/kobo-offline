@@ -15,18 +15,31 @@ function selectDictionaryDownloadUrl(dictionary) {
 }
 
 const DictionaryCard = ({ dictionary }) => {
-  const shouldBreakANewRow = dictionary.type === DICTIONARY_TYPE_LEXICON
   const dictionaryLabel = preventBreakingAtHyphens(
     labelDictionary()(dictionary)
   )
   return (
-    <article
-      className={`card downloads-list--item ${
-        shouldBreakANewRow ? 'downloads-list--item_break' : ''
-      }`}
-    >
-      <a href={selectDictionaryDownloadUrl(dictionary)}>{dictionaryLabel}</a>
-    </article>
+    <tr>
+      <th className="is-vcentered">{dictionaryLabel}</th>
+      <td className="is-vcentered">
+        <span className="tags has-addons">
+          <span className="tag is-primary has-text-white">
+            {dictionary.sourceLanguageCode}
+          </span>
+          {dictionary.targetLanguageCode ? (
+            <span className="tag is-dark">{dictionary.targetLanguageCode}</span>
+          ) : null}
+        </span>
+      </td>
+      <td className="is-vcentered has-text-right">
+        <a
+          href={selectDictionaryDownloadUrl(dictionary)}
+          className="button is-primary is-outlined"
+        >
+          Download
+        </a>
+      </td>
+    </tr>
   )
 }
 DictionaryCard.propTypes = {

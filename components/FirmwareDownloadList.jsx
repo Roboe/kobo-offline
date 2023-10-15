@@ -4,7 +4,7 @@ import DeviceCard from './DeviceCard.jsx'
 
 const FirmwareDownloadList = ({ devices, updatesByDeviceId }) => {
   return (
-    <ul className="downloads-list device-list">
+    <ul className="downloads-list columns is-flex-wrap-wrap">
       {devices.map((device) => (
         <DeviceCard
           key={device.id}
