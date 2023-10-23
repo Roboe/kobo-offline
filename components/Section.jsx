@@ -2,16 +2,16 @@ import PropTypes from 'prop-types'
 
 import Heading from './Heading.jsx'
 
-const Section = ({ headingLevel, id, title, lead, children }) => {
-  const selfAnchor = `#${id}`
+const Section = ({ headingLevel, tocEntry, children }) => {
+  const selfAnchor = `#${tocEntry.id}`
   return (
-    <section id={id}>
+    <section id={tocEntry.id}>
       <header>
         <Heading level={headingLevel}>
           <a className="self-link" href={selfAnchor}></a>
-          <span>{title}</span>
+          <span>{tocEntry.title}</span>
         </Heading>
-        {lead ? <p>{lead}</p> : null}
+        {tocEntry.lead ? <p>{tocEntry.lead}</p> : null}
       </header>
       {children}
     </section>
@@ -19,9 +19,11 @@ const Section = ({ headingLevel, id, title, lead, children }) => {
 }
 Section.propTypes = {
   headingLevel: Heading.propTypes.level,
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  lead: PropTypes.string,
+  tocEntry: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    lead: PropTypes.string,
+  }).isRequired,
   children: PropTypes.node,
 }
 

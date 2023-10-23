@@ -8,13 +8,17 @@ TocList.propTypes = {
 }
 
 const TocItem = ({ branch }) => {
-  const { id, title, ...branches } = branch
+  const { id, title, ...rest } = branch
+  const branchesEntries = Object.entries(rest).filter(
+    ([key, value]) => typeof value === 'object' && !Array.isArray(value)
+  )
+
   return (
     <li>
       <a href={`#${id}`}>{title}</a>
-      {branches ? (
+      {branchesEntries.length > 0 ? (
         <TocList>
-          {Object.entries(branches).map(([key, branch]) => (
+          {branchesEntries.map(([key, branch]) => (
             <TocItem key={key} branch={branch} />
           ))}
         </TocList>

@@ -6,24 +6,26 @@ import TableOfContents from './TableOfContents.jsx'
 
 const TOC = {
   FIRST_BOOT: {
-    title: 'First boot',
     id: 'first-boot',
+    title: 'First boot',
+    lead: 'Avoid being forced to connect your e-reader to the internet and to create a Kobo account',
     SKIP_REGISTRATION: {
-      title: 'Skip device registration',
       id: 'skip-device-registration',
+      title: 'Skip device registration',
       AVERAGE_USERS: {
-        title: 'Easier option for average users',
         id: 'easier-option-for-average-users',
+        title: 'Easier option for average users',
       },
       TECH_SAVVY_USERS: {
-        title: 'Straightforward option for tech savvy users',
         id: 'straightforward-option-for-tech-savvy-users',
+        title: 'Straightforward option for tech savvy users',
       },
     },
   },
   UPDATE_FIRMWARE: {
     id: 'update-firmware',
     title: 'Update E-reader Firmware',
+    lead: 'Get the latest official firmware right from Kobo',
     HOW_TO: {
       id: 'how-to-install-firmware',
       title: 'How to Install Offline Firmware Updates',
@@ -36,6 +38,7 @@ const TOC = {
   ADD_DICTIONARIES: {
     id: 'adding-dictionaries',
     title: 'Adding Dictionaries',
+    lead: 'Get official dictionaries right from Kobo',
     HOW_TO: {
       id: 'how-to-install-dictionaries',
       title: 'How to Install Dictionaries',
@@ -60,13 +63,7 @@ export default function Home({
     <>
       <Layout>
         <TableOfContents toc={TOC} />
-        <Section
-          headingLevel={2}
-          id={TOC.FIRST_BOOT.id}
-          title={TOC.FIRST_BOOT.title}
-          lead="Avoid being forced to connect your e-reader to the internet and
-                to create a Kobo account"
-        >
+        <Section headingLevel={2} tocEntry={TOC.FIRST_BOOT}>
           {/* https://www.darkcoding.net/misc/kobo-ereader-touch-on-ubuntu-linux/ */}
           <p>
             When you start a Kobo e-reader for the first time, it{' '}
@@ -86,11 +83,7 @@ export default function Home({
             alone with the WiFi option.
           </p>
 
-          <Section
-            headingLevel={3}
-            id={TOC.FIRST_BOOT.SKIP_REGISTRATION.id}
-            title={TOC.FIRST_BOOT.SKIP_REGISTRATION.title}
-          >
+          <Section headingLevel={3} tocEntry={TOC.FIRST_BOOT.SKIP_REGISTRATION}>
             {/* https://www.mobileread.com/forums/showthread.php?t=171664 */}
 
             <p>
@@ -103,8 +96,7 @@ export default function Home({
 
             <Section
               headingLevel={4}
-              id={TOC.FIRST_BOOT.SKIP_REGISTRATION.AVERAGE_USERS.id}
-              title={TOC.FIRST_BOOT.SKIP_REGISTRATION.AVERAGE_USERS.title}
+              tocEntry={TOC.FIRST_BOOT.SKIP_REGISTRATION.AVERAGE_USERS}
             >
               <ol>
                 <li>
@@ -142,8 +134,7 @@ export default function Home({
 
             <Section
               headingLevel={4}
-              id={TOC.FIRST_BOOT.SKIP_REGISTRATION.TECH_SAVVY_USERS.id}
-              title={TOC.FIRST_BOOT.SKIP_REGISTRATION.TECH_SAVVY_USERS.title}
+              tocEntry={TOC.FIRST_BOOT.SKIP_REGISTRATION.TECH_SAVVY_USERS}
             >
               <details>
                 <summary>
@@ -182,17 +173,8 @@ export default function Home({
           </Section>
         </Section>
 
-        <Section
-          headingLevel={2}
-          id={TOC.UPDATE_FIRMWARE.id}
-          title={TOC.UPDATE_FIRMWARE.title}
-          lead="Get the latest official firmware right from Kobo"
-        >
-          <Section
-            headingLevel={3}
-            id={TOC.UPDATE_FIRMWARE.HOW_TO.id}
-            title={TOC.UPDATE_FIRMWARE.HOW_TO.title}
-          >
+        <Section headingLevel={2} tocEntry={TOC.UPDATE_FIRMWARE}>
+          <Section headingLevel={3} tocEntry={TOC.UPDATE_FIRMWARE.HOW_TO}>
             <p>
               Download the appropriate ZIP file for your device from the list
               below. Then connect your Kobo e-reader to your computer using a
@@ -203,11 +185,7 @@ export default function Home({
             </p>
           </Section>
 
-          <Section
-            headingLevel={3}
-            id={TOC.UPDATE_FIRMWARE.DOWNLOADS.id}
-            title={TOC.UPDATE_FIRMWARE.DOWNLOADS.title}
-          >
+          <Section headingLevel={3} tocEntry={TOC.UPDATE_FIRMWARE.DOWNLOADS}>
             <p>(List was last updated on: {readableFirmwareListUpdateDate})</p>
             <FirmwareDownloadList
               devices={devices}
@@ -215,17 +193,8 @@ export default function Home({
             />
           </Section>
         </Section>
-        <Section
-          headingLevel={2}
-          id={TOC.ADD_DICTIONARIES.id}
-          title={TOC.ADD_DICTIONARIES.title}
-          lead="Get official dictionaries right from Kobo"
-        >
-          <Section
-            headingLevel={3}
-            id={TOC.ADD_DICTIONARIES.HOW_TO.id}
-            title={TOC.ADD_DICTIONARIES.HOW_TO.title}
-          >
+        <Section headingLevel={2} tocEntry={TOC.ADD_DICTIONARIES}>
+          <Section headingLevel={3} tocEntry={TOC.ADD_DICTIONARIES.HOW_TO}>
             <ol>
               <li>Download the appropriate ZIP files from the list below.</li>
               <li>Connect the Kobo e-reader to your PC with an USB cable.</li>
@@ -252,11 +221,7 @@ export default function Home({
             </ol>
           </Section>
 
-          <Section
-            headingLevel={3}
-            id={TOC.ADD_DICTIONARIES.DOWNLOADS.id}
-            title={TOC.ADD_DICTIONARIES.DOWNLOADS.title}
-          >
+          <Section headingLevel={3} tocEntry={TOC.ADD_DICTIONARIES.DOWNLOADS}>
             {/* https://www.mobileread.com/forums/showthread.php?t=196931 */}
             <DictionaryDownloadList dictionaries={dictionaries} />
           </Section>
