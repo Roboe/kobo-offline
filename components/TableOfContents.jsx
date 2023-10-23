@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types'
 
-const TocList = ({ unordered, children }) => {
-  const List = unordered ? 'ul' : 'ol'
-  return <List>{children}</List>
+const TocList = ({ children }) => {
+  return <ol>{children}</ol>
 }
 TocList.propTypes = {
-  unordered: PropTypes.bool,
   children: PropTypes.node,
 }
 
 const TocItem = ({ branch }) => {
-  const { id, title, unordered, ...branches } = branch
+  const { id, title, ...branches } = branch
   return (
     <li>
       <a href={`#${id}`}>{title}</a>
       {branches ? (
-        <TocList unordered={unordered}>
+        <TocList>
           {Object.entries(branches).map(([key, branch]) => (
             <TocItem key={key} branch={branch} />
           ))}
@@ -28,7 +26,6 @@ TocItem.propTypes = {
   branch: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    unordered: PropTypes.bool,
   }).isRequired,
 }
 
