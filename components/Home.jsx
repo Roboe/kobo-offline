@@ -24,28 +24,28 @@ const TOC = {
   },
   UPDATE_FIRMWARE: {
     id: 'update-firmware',
-    title: 'Update E-reader Firmware',
+    title: 'Update e-reader firmware',
     lead: 'Get the latest official firmware right from Kobo',
     HOW_TO: {
       id: 'how-to-install-firmware',
-      title: 'How to Install Offline Firmware Updates',
+      title: 'How to install offline firmware updates',
     },
     DOWNLOADS: {
       id: 'firmware-downloads',
-      title: 'Firmware Downloads',
+      title: 'Firmware downloads',
     },
   },
   ADD_DICTIONARIES: {
     id: 'adding-dictionaries',
-    title: 'Adding Dictionaries',
+    title: 'Adding dictionaries',
     lead: 'Get official dictionaries right from Kobo',
     HOW_TO: {
       id: 'how-to-install-dictionaries',
-      title: 'How to Install Dictionaries',
+      title: 'How to install dictionaries',
     },
     DOWNLOADS: {
       id: 'dictionary-downloads',
-      title: 'Dictionary Downloads',
+      title: 'Dictionary downloads',
     },
   },
 }
