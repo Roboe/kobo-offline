@@ -68,8 +68,8 @@ export default function Home({
             <strong>blocks</strong> any interaction until you run the setup
             software (Win/Mac only) or connect the device to a WiFi point. This
             initial setup will do two things: it will force you to create a{' '}
-            <code>kobobooks.com</code> account, and it will update your
-            device&apos;s firmware.
+            kobobooks.com account, and it will update your device&apos;s
+            firmware.
           </p>
 
           <p>
@@ -86,10 +86,10 @@ export default function Home({
 
             <p>
               There is a simple way to by-pass the above mentioned restriction.
-              The Kobo reader will skip it whenever a <code>user</code> is
-              detected by its firmware. We could achieve this by editing the
-              internal device database. There are two ways to do it: one for
-              average users, and other for tech savvy ones.
+              The Kobo reader will skip it whenever a user is detected by its
+              firmware. We could achieve this by editing the internal device
+              database. There are two ways to do it: one for average users, and
+              other for tech savvy ones.
             </p>
 
             <Section
@@ -106,26 +106,26 @@ export default function Home({
                   find in the <code>.kobo/</code> directory.
                 </li>
                 <li>
-                  Click on the <code>Browse Data</code> tab and select the{' '}
+                  Click on the <q>Browse Data</q> tab and select the{' '}
                   <code>user</code> table in the dropdown menu.
                 </li>
                 <li>
-                  Click on the <code>New Record</code> button to register a new
-                  user. A new row will be added. Then you can edit each cell
-                  value by double-clicking on them.
+                  Click on the <q>New Record</q> button to register a new user.
+                  A new row will be added. Then you can edit each cell value by
+                  double-clicking on them.
                 </li>
                 <li>
-                  Enter a random name (e.g. &quot;Foo&quot;) in the{' '}
+                  Enter a random name (e.g. <q>Foo</q>) in the{' '}
                   <code>UserDisplayName</code> cell.
                 </li>
                 <li>
-                  Enter a random e-mail address (e.g. &quot;bar@baz.qux&quot;)
-                  in the <code>UserEmail</code> cell. It doesn&apos;t need to
-                  match the standard e-mail address format.
+                  Enter a random e-mail address (e.g. <q>bar@baz.qux</q>) in the{' '}
+                  <code>UserEmail</code> cell. It doesn&apos;t need to match the
+                  standard e-mail address format.
                 </li>
                 <li>
-                  Save the changes by clicking <code>File</code> &rarr;{' '}
-                  <code>Save changes</code>.
+                  Save the changes by clicking <q>File</q> &rarr;{' '}
+                  <q>Save changes</q>.
                 </li>
               </ol>
             </Section>
@@ -209,18 +209,17 @@ export default function Home({
               </li>
               <li>Safely disconnect the e-reader from your computer.</li>
               <li>
-                In the e-reader, tap the <code>&equiv;</code> menu icon at the
-                top left corner, and navigate to <code>Settings</code> &rarr;{' '}
-                <code>Language and dictionaries</code>.
+                In the e-reader, tap the <q>&equiv;</q> menu icon at the top
+                left corner, and navigate to <q>Settings</q> &rarr;{' '}
+                <q>Language and dictionaries</q>.
               </li>
               <li>
-                There you can read:{' '}
-                <cite>&quot;X dictionaries installed&quot;</cite>. Tap the{' '}
-                <code>Edit</code> button at the right.
+                There you can read: <q>X dictionaries installed</q>. Tap the{' '}
+                <q>Edit</q> button at the right.
               </li>
               <li>
                 Enable each dictionary you have downloaded by clicking on the{' '}
-                <code>+</code> button at their side.
+                <q>+</q> button at their side.
               </li>
             </ol>
           </Section>
