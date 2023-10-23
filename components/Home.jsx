@@ -56,9 +56,7 @@ export default function Home({
   updatesByDeviceId,
   lastCheckedUTCDate,
 }) {
-  const readableFirmwareListUpdateDate = new Date(
-    lastCheckedUTCDate
-  ).toLocaleDateString()
+  const firmwareListUpdateDate = new Date(lastCheckedUTCDate)
   return (
     <>
       <Layout>
@@ -186,7 +184,13 @@ export default function Home({
           </Section>
 
           <Section headingLevel={3} tocEntry={TOC.UPDATE_FIRMWARE.DOWNLOADS}>
-            <p>(List was last updated on: {readableFirmwareListUpdateDate})</p>
+            <p>
+              (List was last updated on:{' '}
+              <time datetime={firmwareListUpdateDate.toISOString()}>
+                {firmwareListUpdateDate.toLocaleDateString()}
+              </time>
+              )
+            </p>
             <FirmwareDownloadList
               devices={devices}
               updatesByDeviceId={updatesByDeviceId}
