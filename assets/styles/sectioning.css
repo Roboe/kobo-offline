@@ -10,11 +10,11 @@
   text-align: start;
 }
 
-.kobo-app header > h2 > span {
+.kobo-app hgroup > h2 > span {
 	border-bottom: 3px solid #0eb5ed;
 }
 
-.kobo-app header > h2 + p {
+.kobo-app hgroup > h2 + p {
   margin-top: -1.25em;
 
   text-transform: uppercase;

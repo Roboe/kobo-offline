@@ -6,13 +6,13 @@ const Section = ({ headingLevel, tocEntry, children }) => {
   const selfAnchor = `#${tocEntry.id}`
   return (
     <section id={tocEntry.id}>
-      <header>
+      <hgroup>
         <Heading level={headingLevel}>
           <a className="self-link" href={selfAnchor}></a>
           <span>{tocEntry.title}</span>
         </Heading>
         {tocEntry.lead ? <p>{tocEntry.lead}</p> : null}
-      </header>
+      </hgroup>
       {children}
     </section>
   )
