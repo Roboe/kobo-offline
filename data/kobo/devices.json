@@ -98,5 +98,15 @@
     "id": "00000000-0000-0000-0000-000000000387",
     "model": "Kobo Elipsa",
     "hardware": "kobo8"
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000386",
+    "model": "Kobo Clara 2E",
+    "hardware": "kobo10"
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000389",
+    "model": "Kobo Elipsa 2E",
+    "hardware": "kobo11"
   }
 ]
